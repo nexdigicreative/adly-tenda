@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hubungi Kami | Serena Wedding Organizer</title>
+  <meta name="description" content="Hubungi kantor studio Serena Wedding Organizer di Jakarta Selatan & Bekasi. Layanan konsultasi WhatsApp 24 jam."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav" id="mainNav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__brand" id="cms-brand-name">Serena <em>Wedding</em></a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="venues.html">Venues</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="appointment.html">Appointment</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="appointment.html" class="nav__cta">Konsultasi</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- SUBHERO -->
+<header class="subhero">
+  <div class="container">
+    <p class="eyebrow">Get In Touch</p>
+    <h1>Hubungi Serena Wedding</h1>
+    <p>Kami siap mendengarkan rencana dan mewujudkan hari paling bahagia dalam hidup Anda.</p>
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Contact</span>
+    </div>
+  </div>
+</header>
+
+<!-- CONTACT SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- FORM -->
+      <div class="form-box reveal" style="max-width:100%;margin:0">
+        <h3 style="font-size:1.8rem;margin-bottom:8px">Kirim Pesan Langsung</h3>
+        <p style="font-size:0.88rem;color:var(--c-muted);margin-bottom:24px">Isi form singkat di bawah, kami akan merespons langsung melalui WhatsApp dalam hitungan menit.</p>
+
+        <form id="contactForm" novalidate>
+          <div class="field" style="margin-bottom:14px">
+            <label for="nama">Nama Pasangan *</label>
+            <input type="text" id="nama" placeholder="mis. Rizky & Amelia" required/>
+          </div>
+          <div class="field" style="margin-bottom:14px">
+            <label for="tanggal">Rencana Tanggal Hari-H</label>
+            <input type="date" id="tanggal"/>
+          </div>
+          <div class="field" style="margin-bottom:14px">
+            <label for="tamu">Estimasi Jumlah Tamu</label>
+            <select id="tamu">
+              <option value="">-- Pilih estimasi --</option>
+              <option>&lt; 100 tamu</option>
+              <option selected>100–250 tamu</option>
+              <option>250–500 tamu</option>
+              <option>&gt; 500 tamu</option>
+            </select>
+          </div>
+          <div class="field" style="margin-bottom:20px">
+            <label for="pesan">Ceritakan Kebutuhan / Pertanyaan Anda</label>
+            <textarea id="pesan" rows="4" placeholder="mis. Ingin tahu rincian harga paket Signature untuk venue di Jakarta Selatan..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full" style="padding:14px">
+            <i class="fab fa-whatsapp"></i> Kirim Pesan ke WhatsApp Serena
+          </button>
+        </form>
+      </div>
+
+      <!-- INFO -->
+      <div class="contact-info reveal">
+        <h3 style="font-size:1.8rem;margin-bottom:8px">Kantor & Studio Kami</h3>
+        <p style="font-size:0.88rem;color:var(--c-muted);margin-bottom:20px">Kunjungi studio kami untuk konsultasi santai sambil melihat sampel album, dekorasi, dan portfolio fisik.</p>
+
+        <ul class="ci-list">
+          <li>
+            <span class="ci-ic"><i class="fab fa-whatsapp"></i></span>
+            <div>
+              <small>WhatsApp Hotline</small>
+              <a href="https://wa.me/6285694061768" id="cms-wa-link" target="_blank"><strong id="cms-wa-num">0856-9406-1768</strong></a>
+            </div>
+          </li>
+          <li>
+            <span class="ci-ic"><i class="fas fa-map-marker-alt"></i></span>
+            <div>
+              <small>Alamat Studio</small>
+              <span id="cms-alamat">Jl. Kemang Raya No. 45, Jakarta Selatan & Harapan Indah Bekasi</span>
+            </div>
+          </li>
+          <li>
+            <span class="ci-ic"><i class="fas fa-clock"></i></span>
+            <div>
+              <small>Jam Operasional</small>
+              <span id="cms-jam">Senin–Sabtu, 09.00–18.00 WIB (Minggu dengan Janji Temu)</span>
+            </div>
+          </li>
+          <li>
+            <span class="ci-ic"><i class="fas fa-envelope"></i></span>
+            <div>
+              <small>Email Resmi</small>
+              <a href="mailto:hello@serenawedding.id" id="cms-email">hello@serenawedding.id</a>
+            </div>
+          </li>
+        </ul>
+
+        <div style="margin-top:28px">
+          <p style="font-size:0.75rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--c-muted);margin-bottom:10px">Media Sosial Resmi</p>
+          <div class="socials">
+            <a href="#" id="cms-ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" id="cms-tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/6285694061768" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="nav__brand" id="cms-footer-brand">Serena <em>Wedding</em></a>
+      <p id="cms-footer-tagline">Membantu Anda merayakan cinta dengan cara yang paling indah, terorganisir, dan berkesan seumur hidup.</p>
+      <div class="socials" style="margin-top:20px">
+        <a href="#" id="cms-ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" id="cms-tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/6285694061768" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer__cols">
+      <h5>Halaman</h5>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services & Paket</a>
+      <a href="events.html">Events & Galeri</a>
+      <a href="venues.html">Daftar Venues</a>
+      <a href="about.html">About Us</a>
+      <a href="appointment.html">Appointment</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer__cols">
+      <h5>Layanan Utama</h5>
+      <a href="services.html#lamaran">Paket Lamaran</a>
+      <a href="services.html#akad">Paket Akad Nikah</a>
+      <a href="services.html#intimate">Paket Intimate Wedding</a>
+      <a href="services.html#gedung">Paket Wedding Gedung</a>
+      <a href="appointment.html">Konsultasi Gratis</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p id="cms-copyright">&copy; 2026 Serena Wedding. Hak Cipta Dilindungi.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/6285694061768?text=Halo%20Serena%20Wedding%2C%20saya%20ingin%20tanya%20info%20lebih%20lanjut." id="cms-wa-float" class="wa-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a href="admin/login.html" id="adminBtn" class="admin-btn" title="CMS Admin Panel"><i class="fas fa-sliders-h"></i><span>Admin CMS</span></a>
+
+<script src="cms.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

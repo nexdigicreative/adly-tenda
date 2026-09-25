@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Venue & Gedung Rekanan Pernikahan | Serena Wedding</title>
+  <meta name="description" content="Temukan gedung pernikahan, hotel ballroom, dan tempat outdoor terbaik di Jakarta, Bekasi, Tangerang, dan Bogor bersama Serena Wedding."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav" id="mainNav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__brand" id="cms-brand-name">Serena <em>Wedding</em></a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="venues.html" class="active">Venues</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="appointment.html">Appointment</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="appointment.html" class="nav__cta">Konsultasi</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- SUBHERO -->
+<header class="subhero">
+  <div class="container">
+    <p class="eyebrow">Our Partner Venues</p>
+    <h1>Venue & Gedung Pernikahan Rekanan</h1>
+    <p>Kami bermitra dengan 45+ gedung serbaguna, ballroom hotel berbintang, dan taman outdoor terfavorit se-Jabodetabek.</p>
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Venues</span>
+    </div>
+  </div>
+</header>
+
+<!-- VENUES DIRECTORY WITH FILTERS -->
+<section class="section">
+  <div class="container">
+    <div class="venue-filters reveal">
+      <button class="filter-btn active" data-filter="all">Semua Area</button>
+      <button class="filter-btn" data-filter="jakarta">Jakarta</button>
+      <button class="filter-btn" data-filter="bekasi">Bekasi</button>
+      <button class="filter-btn" data-filter="tangerang">Tangerang & BSD</button>
+      <button class="filter-btn" data-filter="bogor">Bogor & Sentul</button>
+    </div>
+
+    <div class="venue-grid" id="venueGrid">
+      <!-- Venue 1 -->
+      <div class="venue-card reveal" data-area="jakarta">
+        <div class="venue-card__img">
+          <img src="Assets/portfolio_1.jpg" alt="The Grand Ballroom Jakarta" loading="lazy"/>
+          <span class="venue-badge">Jakarta Selatan</span>
+        </div>
+        <div class="venue-card__body">
+          <h3 class="venue-card__title">The Grand Ballroom Simatupang</h3>
+          <p class="venue-card__loc"><i class="fas fa-map-marker-alt"></i> TB Simatupang, Jakarta Selatan</p>
+          <div class="venue-specs">
+            <div><span>Kapasitas:</span><strong>500–1200 Tamu</strong></div>
+            <div><span>Tipe:</span><strong>Luxury Ballroom Hotel</strong></div>
+          </div>
+          <a href="appointment.html?venue=GrandBallroomSimatupang" class="venue-card__btn">Konsultasikan Venue Ini</a>
+        </div>
+      </div>
+
+      <!-- Venue 2 -->
+      <div class="venue-card reveal" data-area="bekasi">
+        <div class="venue-card__img">
+          <img src="Assets/portfolio_2.jpg" alt="Puri Garden Glasshouse" loading="lazy"/>
+          <span class="venue-badge">Bekasi</span>
+        </div>
+        <div class="venue-card__body">
+          <h3 class="venue-card__title">Puri Gardenia & Glasshouse</h3>
+          <p class="venue-card__loc"><i class="fas fa-map-marker-alt"></i> Harapan Indah, Kota Bekasi</p>
+          <div class="venue-specs">
+            <div><span>Kapasitas:</span><strong>200–600 Tamu</strong></div>
+            <div><span>Tipe:</span><strong>Semi Outdoor / Garden</strong></div>
+          </div>
+          <a href="appointment.html?venue=PuriGardeniaBekasi" class="venue-card__btn">Konsultasikan Venue Ini</a>
+        </div>
+      </div>
+
+      <!-- Venue 3 -->
+      <div class="venue-card reveal" data-area="tangerang">
+        <div class="venue-card__img">
+          <img src="Assets/portfolio_4.jpg" alt="Royal Pavilion BSD" loading="lazy"/>
+          <span class="venue-badge">Tangerang & BSD</span>
+        </div>
+        <div class="venue-card__body">
+          <h3 class="venue-card__title">The Royal Pavilion BSD</h3>
+          <p class="venue-card__loc"><i class="fas fa-map-marker-alt"></i> BSD Grand Boulevard, Tangerang</p>
+          <div class="venue-specs">
+            <div><span>Kapasitas:</span><strong>300–800 Tamu</strong></div>
+            <div><span>Tipe:</span><strong>Modern Convention Hall</strong></div>
+          </div>
+          <a href="appointment.html?venue=RoyalPavilionBSD" class="venue-card__btn">Konsultasikan Venue Ini</a>
+        </div>
+      </div>
+
+      <!-- Venue 4 -->
+      <div class="venue-card reveal" data-area="bogor">
+        <div class="venue-card__img">
+          <img src="Assets/portfolio_3.jpg" alt="Sentul Pine Sanctuary" loading="lazy"/>
+          <span class="venue-badge">Bogor & Sentul</span>
+        </div>
+        <div class="venue-card__body">
+          <h3 class="venue-card__title">Sentul Pine Haven Sanctuary</h3>
+          <p class="venue-card__loc"><i class="fas fa-map-marker-alt"></i> Sentul Highlands, Bogor</p>
+          <div class="venue-specs">
+            <div><span>Kapasitas:</span><strong>150–450 Tamu</strong></div>
+            <div><span>Tipe:</span><strong>Outdoor Pine Forest</strong></div>
+          </div>
+          <a href="appointment.html?venue=SentulPineHaven" class="venue-card__btn">Konsultasikan Venue Ini</a>
+        </div>
+      </div>
+
+      <!-- Venue 5 -->
+      <div class="venue-card reveal" data-area="jakarta">
+        <div class="venue-card__img">
+          <img src="Assets/hero_wedding.jpg" alt="Heritage Mansion Menteng" loading="lazy"/>
+          <span class="venue-badge">Jakarta Pusat</span>
+        </div>
+        <div class="venue-card__body">
+          <h3 class="venue-card__title">Heritage Mansion Menteng</h3>
+          <p class="venue-card__loc"><i class="fas fa-map-marker-alt"></i> Menteng, Jakarta Pusat</p>
+          <div class="venue-specs">
+            <div><span>Kapasitas:</span><strong>100–350 Tamu</strong></div>
+            <div><span>Tipe:</span><strong>Colonial Intimate Hall</strong></div>
+          </div>
+          <a href="appointment.html?venue=HeritageMenteng" class="venue-card__btn">Konsultasikan Venue Ini</a>
+        </div>
+      </div>
+
+      <!-- Venue 6 -->
+      <div class="venue-card reveal" data-area="bekasi">
+        <div class="venue-card__img">
+          <img src="Assets/hero_main.jpg" alt="Sasono Mulyo Convention" loading="lazy"/>
+          <span class="venue-badge">Bekasi & Jaktim</span>
+        </div>
+        <div class="venue-card__body">
+          <h3 class="venue-card__title">Sasono Utomo Convention</h3>
+          <p class="venue-card__loc"><i class="fas fa-map-marker-alt"></i> Kalimalang / Bekasi Barat</p>
+          <div class="venue-specs">
+            <div><span>Kapasitas:</span><strong>400–1000 Tamu</strong></div>
+            <div><span>Tipe:</span><strong>Gedung Serbaguna Megah</strong></div>
+          </div>
+          <a href="appointment.html?venue=SasonoUtomo" class="venue-card__btn">Konsultasikan Venue Ini</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CUSTOM VENUE BOX -->
+    <div style="margin-top:60px;background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--r-md);padding:36px;text-align:center" class="reveal">
+      <h3 style="margin-bottom:10px">Sudah Punya Pilihan Gedung Sendiri atau Ingin di Rumah?</h3>
+      <p style="color:var(--c-muted);max-width:600px;margin:0 auto 24px">Serena Wedding siap membantu koordinasi teknis, survei layout, dan penataan vendor di venue manapun pilihan keluarga Anda.</p>
+      <a href="appointment.html" class="btn btn--primary">Konsultasikan Venue Pilihan Anda <i class="fas fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="nav__brand" id="cms-footer-brand">Serena <em>Wedding</em></a>
+      <p id="cms-footer-tagline">Membantu Anda merayakan cinta dengan cara yang paling indah, terorganisir, dan berkesan seumur hidup.</p>
+      <div class="socials" style="margin-top:20px">
+        <a href="#" id="cms-ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" id="cms-tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/6285694061768" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer__cols">
+      <h5>Halaman</h5>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services & Paket</a>
+      <a href="events.html">Events & Galeri</a>
+      <a href="venues.html">Daftar Venues</a>
+      <a href="about.html">About Us</a>
+      <a href="appointment.html">Appointment</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer__cols">
+      <h5>Layanan Utama</h5>
+      <a href="services.html#lamaran">Paket Lamaran</a>
+      <a href="services.html#akad">Paket Akad Nikah</a>
+      <a href="services.html#intimate">Paket Intimate Wedding</a>
+      <a href="services.html#gedung">Paket Wedding Gedung</a>
+      <a href="appointment.html">Konsultasi Gratis</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p id="cms-copyright">&copy; 2026 Serena Wedding. Hak Cipta Dilindungi.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/6285694061768?text=Halo%20Serena%20Wedding%2C%20saya%20ingin%20tanya%20mengenai%20rekanan%20venue." id="cms-wa-float" class="wa-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a href="admin/login.html" id="adminBtn" class="admin-btn" title="CMS Admin Panel"><i class="fas fa-sliders-h"></i><span>Admin CMS</span></a>
+
+<script src="cms.js"></script>
+<script src="script.js"></script>
+<script>
+// Filter interaction
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    const f = this.dataset.filter;
+    document.querySelectorAll('.venue-card').forEach(card => {
+      if(f === 'all' || card.dataset.area === f){
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>

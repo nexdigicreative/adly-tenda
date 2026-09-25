@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulir Janji Temu & Konsultasi | Serena Wedding</title>
+  <meta name="description" content="Jadwalkan sesi konsultasi pernikahan impian Anda bersama wedding planner Serena Wedding secara online maupun tatap muka."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav" id="mainNav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__brand" id="cms-brand-name">Serena <em>Wedding</em></a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="venues.html">Venues</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="appointment.html" class="active">Appointment</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="appointment.html" class="nav__cta">Konsultasi</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- SUBHERO -->
+<header class="subhero">
+  <div class="container">
+    <p class="eyebrow">Schedule An Appointment</p>
+    <h1>Formulir Janji Temu Konsultasi</h1>
+    <p>Diskusikan konsep, budgeting, dan jadwal pernikahan Anda secara gratis bersama konsultan ahli kami.</p>
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Appointment</span>
+    </div>
+  </div>
+</header>
+
+<!-- APPOINTMENT FORM SECTION -->
+<section class="section">
+  <div class="container">
+    <div class="form-box reveal">
+      <div style="text-align:center;margin-bottom:30px">
+        <p class="eyebrow" style="color:var(--c-gold)">Langkah Awal Pernikahan Bahagia</p>
+        <h2 style="font-size:2rem;margin-bottom:8px">Lengkapi Detail Rencana Acara</h2>
+        <p style="font-size:0.88rem;color:var(--c-muted)">Tim kami akan menyiapkan portofolio relevan dan simulasi anggaran sebelum sesi konsultasi.</p>
+      </div>
+
+      <form id="aptForm" novalidate>
+        <div class="form-grid">
+          <!-- Nama Pasangan -->
+          <div class="field">
+            <label for="aptNamaPasangan">Nama Calon Pengantin (Pria & Wanita) *</label>
+            <input type="text" id="aptNamaPasangan" placeholder="mis. Rizky & Amelia" required/>
+          </div>
+
+          <!-- WhatsApp -->
+          <div class="field">
+            <label for="aptWA">Nomor WhatsApp Aktif *</label>
+            <input type="tel" id="aptWA" placeholder="mis. 0812-3456-7890" required/>
+          </div>
+
+          <!-- Email -->
+          <div class="field">
+            <label for="aptEmail">Alamat Email</label>
+            <input type="email" id="aptEmail" placeholder="nama@email.com"/>
+          </div>
+
+          <!-- Jenis Konsultasi -->
+          <div class="field">
+            <label for="aptTipe">Metode Konsultasi yang Diinginkan *</label>
+            <select id="aptTipe" required>
+              <option value="Tatap Muka di Studio (Jakarta Selatan)">Tatap Muka di Studio Serena (Jakarta)</option>
+              <option value="Online Video Call (Zoom / Google Meet)">Online Video Call (Zoom / Meet)</option>
+              <option value="WhatsApp Call & Chat">WhatsApp Chat & Call</option>
+            </select>
+          </div>
+
+          <!-- Paket Pilihan -->
+          <div class="field">
+            <label for="aptPaket">Paket yang Diminati</label>
+            <select id="aptPaket">
+              <option value="Signature Wedding">Paket Signature Wedding (Populer)</option>
+              <option value="Intimate Wedding">Paket Intimate Wedding</option>
+              <option value="Grand Ballroom All-In">Paket Grand Ballroom All-In</option>
+              <option value="Paket Lamaran">Paket Lamaran & Tunangan</option>
+              <option value="Paket Akad Nikah">Paket Akad Nikah</option>
+              <option value="Custom / Belum Tahu">Custom / Ingin Konsultasi Dulu</option>
+            </select>
+          </div>
+
+          <!-- Estimasi Tamu -->
+          <div class="field">
+            <label for="aptTamu">Estimasi Jumlah Tamu</label>
+            <select id="aptTamu">
+              <option value="< 100 Tamu">&lt; 100 Tamu (Private)</option>
+              <option value="100–250 Tamu" selected>100–250 Tamu (Intimate)</option>
+              <option value="250–500 Tamu">250–500 Tamu (Medium)</option>
+              <option value="500–1000 Tamu">500–1000 Tamu (Grand)</option>
+              <option value="> 1000 Tamu">&gt; 1000 Tamu (Mega Ballroom)</option>
+            </select>
+          </div>
+
+          <!-- Rencana Tanggal Acara -->
+          <div class="field">
+            <label for="aptTglAcara">Perkiraan Tanggal Hari-H Pernikahan</label>
+            <input type="date" id="aptTglAcara"/>
+          </div>
+
+          <!-- Pilihan Tanggal Konsultasi -->
+          <div class="field">
+            <label for="aptTglKonsul">Pilihan Tanggal Konsultasi *</label>
+            <input type="date" id="aptTglKonsul" required/>
+          </div>
+
+          <!-- Pilihan Jam Konsultasi -->
+          <div class="field">
+            <label for="aptJamKonsul">Pilihan Jam Konsultasi *</label>
+            <select id="aptJamKonsul" required>
+              <option value="10.00 WIB">Pagi (10.00 WIB)</option>
+              <option value="13.30 WIB" selected>Siang (13.30 WIB)</option>
+              <option value="15.30 WIB">Sore (15.30 WIB)</option>
+              <option value="19.00 WIB">Malam (19.00 WIB - Online)</option>
+            </select>
+          </div>
+
+          <!-- Venue Preferensi -->
+          <div class="field">
+            <label for="aptVenue">Rencana Lokasi / Venue</label>
+            <input type="text" id="aptVenue" placeholder="mis. Gedung di Jakarta Selatan / Belum Ada"/>
+          </div>
+
+          <!-- Catatan Khusus -->
+          <div class="field form-grid--full">
+            <label for="aptCatatan">Ceritakan Impian atau Pertanyaan Anda</label>
+            <textarea id="aptCatatan" rows="3" placeholder="mis. Ingin tema nuansa hijau emerald adat Jawa modern, mohon rekomendasi katering..."></textarea>
+          </div>
+
+          <div class="form-grid--full" style="margin-top:10px">
+            <button type="submit" class="btn btn--primary btn--full" style="padding:15px">
+              <i class="fab fa-whatsapp"></i> Konfirmasi & Kirim Jadwal Konsultasi ke WhatsApp
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="nav__brand" id="cms-footer-brand">Serena <em>Wedding</em></a>
+      <p id="cms-footer-tagline">Membantu Anda merayakan cinta dengan cara yang paling indah, terorganisir, dan berkesan seumur hidup.</p>
+      <div class="socials" style="margin-top:20px">
+        <a href="#" id="cms-ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" id="cms-tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/6285694061768" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer__cols">
+      <h5>Halaman</h5>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services & Paket</a>
+      <a href="events.html">Events & Galeri</a>
+      <a href="venues.html">Daftar Venues</a>
+      <a href="about.html">About Us</a>
+      <a href="appointment.html">Appointment</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer__cols">
+      <h5>Layanan Utama</h5>
+      <a href="services.html#lamaran">Paket Lamaran</a>
+      <a href="services.html#akad">Paket Akad Nikah</a>
+      <a href="services.html#intimate">Paket Intimate Wedding</a>
+      <a href="services.html#gedung">Paket Wedding Gedung</a>
+      <a href="appointment.html">Konsultasi Gratis</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p id="cms-copyright">&copy; 2026 Serena Wedding. Hak Cipta Dilindungi.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/6285694061768?text=Halo%20Serena%20Wedding%2C%20saya%20ingin%20jadwalkan%20konsultasi." id="cms-wa-float" class="wa-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a href="admin/login.html" id="adminBtn" class="admin-btn" title="CMS Admin Panel"><i class="fas fa-sliders-h"></i><span>Admin CMS</span></a>
+
+<script src="cms.js"></script>
+<script src="script.js"></script>
+<script>
+// Auto-fill from query string if available
+document.addEventListener('DOMContentLoaded', function(){
+  const params = new URLSearchParams(window.location.search);
+  const paket = params.get('paket');
+  const venue = params.get('venue');
+  
+  if(paket){
+    const sel = document.getElementById('aptPaket');
+    for(let i=0; i<sel.options.length; i++){
+      if(sel.options[i].value.toLowerCase().includes(paket.toLowerCase())){
+        sel.selectedIndex = i;
+        break;
+      }
+    }
+  }
+  if(venue){
+    const vInp = document.getElementById('aptVenue');
+    if(vInp) vInp.value = venue;
+  }
+});
+
+// Submit Form Handler
+document.getElementById('aptForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const nama = document.getElementById('aptNamaPasangan').value.trim();
+  const wa = document.getElementById('aptWA').value.trim();
+  const email = document.getElementById('aptEmail').value.trim();
+  const tipe = document.getElementById('aptTipe').value;
+  const paket = document.getElementById('aptPaket').value;
+  const tamu = document.getElementById('aptTamu').value;
+  const tglAcara = document.getElementById('aptTglAcara').value;
+  const tglKonsul = document.getElementById('aptTglKonsul').value;
+  const jamKonsul = document.getElementById('aptJamKonsul').value;
+  const venue = document.getElementById('aptVenue').value.trim();
+  const catatan = document.getElementById('aptCatatan').value.trim();
+
+  if(!nama || !wa || !tglKonsul){
+    alert('Mohon lengkapi Nama Pasangan, No WhatsApp, dan Pilihan Tanggal Konsultasi.');
+    return;
+  }
+
+  const tglKonsulFmt = new Date(tglKonsul).toLocaleDateString('id-ID', {weekday:'long', day:'numeric', month:'long', year:'numeric'});
+  const tglAcaraFmt  = tglAcara ? new Date(tglAcara).toLocaleDateString('id-ID', {day:'numeric', month:'long', year:'numeric'}) : 'Belum ditentukan';
+
+  const msg = [
+    `Halo *Serena Wedding*, saya ingin mengonfirmasi jadwal janji temu konsultasi pernikahan. 💍🌿`,
+    ``,
+    `📋 *DATA RESERVASI KONSULTASI:*`,
+    `• Nama Pasangan : ${nama}`,
+    `• Kontak WA     : ${wa}`,
+    `• Email         : ${email || '-'}`,
+    `• Metode Konsul : ${tipe}`,
+    `• Jadwal Konsul : *${tglKonsulFmt}* (Pukul ${jamKonsul})`,
+    ``,
+    `🏰 *RENCANA ACARA:*`,
+    `• Pilihan Paket : ${paket}`,
+    `• Estimasi Tamu : ${tamu}`,
+    `• Tanggal Hari-H: ${tglAcaraFmt}`,
+    `• Rencana Venue : ${venue || '-'}`,
+    `• Catatan/Impian: ${catatan || '-'}`,
+    ``,
+    `Mohon konfirmasi kesediaan jadwal. Terima kasih!`
+  ].join('\n');
+
+  let waNum = '6285694061768';
+  try{
+    const d = JSON.parse(localStorage.getItem('serena_cms_data')||'{}');
+    if(d.kontak && d.kontak.waNum) waNum = d.kontak.waNum;
+  }catch(err){}
+
+  window.open(`https://wa.me/${waNum}?text=${encodeURIComponent(msg)}`, '_blank');
+});
+</script>
+</body>
+</html>

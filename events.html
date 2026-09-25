@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Galeri Acara & Real Weddings | Serena Wedding</title>
+  <meta name="description" content="Dokumentasi portofolio pernikahan nyata yang didampingi oleh Serena Wedding di Jakarta, Bekasi, Bali, dan kota-kota lainnya."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="nav" id="mainNav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__brand" id="cms-brand-name">Serena <em>Wedding</em></a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="events.html" class="active">Events</a></li>
+      <li><a href="venues.html">Venues</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="appointment.html">Appointment</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="appointment.html" class="nav__cta">Konsultasi</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- SUBHERO -->
+<header class="subhero">
+  <div class="container">
+    <p class="eyebrow">Real Weddings & Gallery</p>
+    <h1>Cerita Cinta & Acara Nyata</h1>
+    <p>Setiap pasangan memiliki kisah unik. Intip keindahan momen-momen sakral yang telah kami dampingi.</p>
+    <div class="breadcrumbs">
+      <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Events</span>
+    </div>
+  </div>
+</header>
+
+<!-- EVENTS SHOWCASE WITH FILTERS -->
+<section class="section">
+  <div class="container">
+    <div class="venue-filters reveal">
+      <button class="filter-btn active" data-filter="all">Semua Acara</button>
+      <button class="filter-btn" data-filter="ballroom">Ballroom Hotel</button>
+      <button class="filter-btn" data-filter="garden">Outdoor / Garden</button>
+      <button class="filter-btn" data-filter="adat">Tradisional Adat</button>
+      <button class="filter-btn" data-filter="intimate">Intimate Wedding</button>
+    </div>
+
+    <div class="events-grid" id="eventsGrid">
+      <!-- Item 1 -->
+      <div class="event-card reveal" data-category="ballroom">
+        <div class="event-card__media">
+          <img src="Assets/portfolio_1.jpg" alt="Putri & Rama Wedding" loading="lazy"/>
+          <span class="event-card__tag">Ballroom · Jakarta</span>
+        </div>
+        <div class="event-card__body">
+          <h3 class="event-card__couple">Putri & Rama</h3>
+          <p class="event-card__meta">Modern Glam Ballroom · 500 Tamu</p>
+          <p class="event-card__desc">Pernikahan megah di Grand Ballroom dengan instalasi chandelier mewah, paduan bunga mawar putih dan pencahayaan warm white romantis.</p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="event-card reveal" data-category="garden">
+        <div class="event-card__media">
+          <img src="Assets/portfolio_2.jpg" alt="Rosma & Tovik Wedding" loading="lazy"/>
+          <span class="event-card__tag">Outdoor · Bali</span>
+        </div>
+        <div class="event-card__body">
+          <h3 class="event-card__couple">Rosma & Tovik</h3>
+          <p class="event-card__meta">Sunset Cliff Garden · 200 Tamu</p>
+          <p class="event-card__desc">Pemberkatan di tepi pantai saat senja yang syahdu dilanjutkan resepsi makan malam santai di bawah kerlip fairy lights.</p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="event-card reveal" data-category="adat">
+        <div class="event-card__media">
+          <img src="Assets/portfolio_3.jpg" alt="Dimas & Alexa Wedding" loading="lazy"/>
+          <span class="event-card__tag">Adat Jawa · Yogyakarta</span>
+        </div>
+        <div class="event-card__body">
+          <h3 class="event-card__couple">Dimas & Alexa</h3>
+          <p class="event-card__meta">Panggih Adat Klasik · 350 Tamu</p>
+          <p class="event-card__desc">Prosesi adat Jawa komplit mulai dari siraman, midodareni, hingga temu manten dengan dekorasi gebyok ukir kontemporer.</p>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="event-card reveal" data-category="intimate">
+        <div class="event-card__media">
+          <img src="Assets/portfolio_4.jpg" alt="Farhan & Sari Wedding" loading="lazy"/>
+          <span class="event-card__tag">Intimate · Bandung</span>
+        </div>
+        <div class="event-card__body">
+          <h3 class="event-card__couple">Farhan & Sari</h3>
+          <p class="event-card__meta">Boho Glasshouse · 120 Tamu</p>
+          <p class="event-card__desc">Konsep pernikahan intimate di dalam glasshouse berudara sejuk dengan sentuhan dekorasi bohemian pampas grass dan kayu hangat.</p>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="event-card reveal" data-category="adat">
+        <div class="event-card__media">
+          <img src="Assets/hero_wedding.jpg" alt="Rizky & Amelia Wedding" loading="lazy"/>
+          <span class="event-card__tag">Adat Sunda · Bekasi</span>
+        </div>
+        <div class="event-card__body">
+          <h3 class="event-card__couple">Rizky & Amelia</h3>
+          <p class="event-card__meta">Akad Sunda Siger & Resepsi · 400 Tamu</p>
+          <p class="event-card__desc">Nuansa anggun siger Sunda berpadu dengan prosesi sawer dan huap lingkung yang meriah penuh haru dan tawa keluarga.</p>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="event-card reveal" data-category="ballroom">
+        <div class="event-card__media">
+          <img src="Assets/hero_main.jpg" alt="Aldi & Putri Wedding" loading="lazy"/>
+          <span class="event-card__tag">Modern · Tangerang</span>
+        </div>
+        <div class="event-card__body">
+          <h3 class="event-card__couple">Aldi & Putri</h3>
+          <p class="event-card__meta">Minimalist Editorial · 300 Tamu</p>
+          <p class="event-card__desc">Konsep pernikahan modern minimalis terinspirasi gaya editorial majalah mode internasional dengan estetika bersih dan elegan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section section--dark" style="text-align:center">
+  <div class="container reveal">
+    <p class="eyebrow" style="color:var(--c-gold)">Wujudkan Kisah Anda</p>
+    <h2 style="color:#fff;margin-bottom:14px">Ingin Pernikahan Anda Seindah Ini?</h2>
+    <p style="color:rgba(255,255,255,0.75);max-width:540px;margin:0 auto 30px">Diskusikan konsep impian Anda bersama tim perancang Serena Wedding hari ini.</p>
+    <a href="appointment.html" class="btn btn--gold">Jadwalkan Konsultasi Gratis</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="index.html" class="nav__brand" id="cms-footer-brand">Serena <em>Wedding</em></a>
+      <p id="cms-footer-tagline">Membantu Anda merayakan cinta dengan cara yang paling indah, terorganisir, dan berkesan seumur hidup.</p>
+      <div class="socials" style="margin-top:20px">
+        <a href="#" id="cms-ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" id="cms-tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://wa.me/6285694061768" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <div class="footer__cols">
+      <h5>Halaman</h5>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services & Paket</a>
+      <a href="events.html">Events & Galeri</a>
+      <a href="venues.html">Daftar Venues</a>
+      <a href="about.html">About Us</a>
+      <a href="appointment.html">Appointment</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="footer__cols">
+      <h5>Layanan Utama</h5>
+      <a href="services.html#lamaran">Paket Lamaran</a>
+      <a href="services.html#akad">Paket Akad Nikah</a>
+      <a href="services.html#intimate">Paket Intimate Wedding</a>
+      <a href="services.html#gedung">Paket Wedding Gedung</a>
+      <a href="appointment.html">Konsultasi Gratis</a>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p id="cms-copyright">&copy; 2026 Serena Wedding. Hak Cipta Dilindungi.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/6285694061768?text=Halo%20Serena%20Wedding%2C%20saya%20tertarik%20melihat%20galeri%20acara%20Anda." id="cms-wa-float" class="wa-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+<a href="admin/login.html" id="adminBtn" class="admin-btn" title="CMS Admin Panel"><i class="fas fa-sliders-h"></i><span>Admin CMS</span></a>
+
+<script src="cms.js"></script>
+<script src="script.js"></script>
+<script>
+// Filter interaction
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    const f = this.dataset.filter;
+    document.querySelectorAll('.event-card').forEach(card => {
+      if(f === 'all' || card.dataset.category === f){
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
