@@ -1,97 +1,97 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Dashboard CMS — Serena Wedding</title>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#f4f1eb;--surface:#fff;--ink:#1A1A18;--muted:#7A7A74;--accent:#2B4D3F;--gold:#B8935B;--border:rgba(184,147,91,.2);--danger:#c0392b;--success:#27ae60}
-body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;display:flex}
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>CMS Dashboard — Serena Wedding</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#f4f1eb;--surface:#fff;--ink:#1A1A18;--muted:#7A7A74;--accent:#2B4D3F;--gold:#B8935B;--border:rgba(184,147,91,.2);--danger:#c0392b;--success:#27ae60}
+    body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--ink);min-height:100vh;display:flex}
 
-/* SIDEBAR */
-.sidebar{width:240px;background:var(--accent);min-height:100vh;display:flex;flex-direction:column;flex-shrink:0;position:sticky;top:0}
-.sidebar__brand{padding:28px 20px;border-bottom:1px solid rgba(255,255,255,.12)}
-.sidebar__brand h1{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:#fff;font-weight:400}
-.sidebar__brand h1 em{font-style:italic;color:var(--gold)}
-.sidebar__brand small{font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.5);text-transform:uppercase}
-.sidebar__nav{flex:1;padding:16px 0;overflow-y:auto}
-.sidebar__nav a{display:flex;align-items:center;gap:12px;padding:11px 20px;color:rgba(255,255,255,.7);font-size:.85rem;font-weight:400;text-decoration:none;transition:all .25s;border-left:3px solid transparent}
-.sidebar__nav a:hover,.sidebar__nav a.active{color:#fff;background:rgba(255,255,255,.08);border-left-color:var(--gold)}
-.sidebar__nav a i{width:16px;text-align:center;font-size:.9rem}
-.sidebar__nav .nav-group{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35);padding:16px 20px 6px;margin-top:8px}
-.sidebar__foot{padding:16px 20px;border-top:1px solid rgba(255,255,255,.1)}
-.sidebar__foot a{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.5);font-size:.8rem;text-decoration:none}
-.sidebar__foot a:hover{color:#fff}
+    /* SIDEBAR */
+    .sidebar{width:240px;background:var(--accent);min-height:100vh;display:flex;flex-direction:column;flex-shrink:0;position:sticky;top:0;height:100vh}
+    .sidebar__brand{padding:28px 20px;border-bottom:1px solid rgba(255,255,255,.12)}
+    .sidebar__brand h1{font-family:'Cormorant Garamond',serif;font-size:1.25rem;color:#fff;font-weight:400}
+    .sidebar__brand h1 em{font-style:italic;color:var(--gold)}
+    .sidebar__brand small{font-size:.68rem;letter-spacing:.12em;color:rgba(255,255,255,.5);text-transform:uppercase;display:block;margin-top:2px}
+    .sidebar__nav{flex:1;padding:16px 0;overflow-y:auto}
+    .sidebar__nav a{display:flex;align-items:center;gap:12px;padding:11px 20px;color:rgba(255,255,255,.7);font-size:.85rem;font-weight:400;text-decoration:none;transition:all .25s;border-left:3px solid transparent}
+    .sidebar__nav a:hover,.sidebar__nav a.active{color:#fff;background:rgba(255,255,255,.08);border-left-color:var(--gold)}
+    .sidebar__nav a i{width:16px;text-align:center;font-size:.9rem}
+    .sidebar__nav .nav-group{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(255,255,255,.35);padding:16px 20px 6px;margin-top:8px}
+    .sidebar__foot{padding:16px 20px;border-top:1px solid rgba(255,255,255,.1)}
+    .sidebar__foot a{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.5);font-size:.8rem;text-decoration:none}
+    .sidebar__foot a:hover{color:#fff}
 
-/* MAIN */
-.main{flex:1;display:flex;flex-direction:column;min-width:0}
-.topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
-.topbar h2{font-family:'Jost',sans-serif;font-size:1rem;font-weight:600;color:var(--ink)}
-.topbar-actions{display:flex;gap:10px;align-items:center}
-.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 18px;border-radius:3px;font-family:'Jost',sans-serif;font-size:.82rem;font-weight:500;cursor:pointer;border:none;transition:all .25s;text-decoration:none}
-.btn-save{background:var(--accent);color:#fff}
-.btn-save:hover{background:#1d3d31}
-.btn-reset{background:transparent;border:1px solid var(--border);color:var(--muted)}
-.btn-reset:hover{border-color:var(--danger);color:var(--danger)}
-.btn-logout{background:transparent;color:rgba(255,255,255,.55);font-size:.78rem;cursor:pointer;border:none;font-family:'Jost',sans-serif;display:flex;align-items:center;gap:6px}
-.btn-logout:hover{color:#fff}
-.content{flex:1;padding:28px;overflow-y:auto}
+    /* MAIN */
+    .main{flex:1;display:flex;flex-direction:column;min-width:0;height:100vh;overflow:hidden}
+    .topbar{background:var(--surface);border-bottom:1px solid var(--border);padding:14px 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100}
+    .topbar h2{font-family:'Jost',sans-serif;font-size:1.05rem;font-weight:600;color:var(--ink)}
+    .topbar-actions{display:flex;gap:10px;align-items:center}
+    .btn{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:3px;font-family:'Jost',sans-serif;font-size:.82rem;font-weight:500;cursor:pointer;border:none;transition:all .25s;text-decoration:none}
+    .btn-save{background:var(--accent);color:#fff}
+    .btn-save:hover{background:#1d3d31}
+    .btn-reset{background:transparent;border:1px solid var(--border);color:var(--muted)}
+    .btn-reset:hover{border-color:var(--danger);color:var(--danger)}
+    .btn-site{background:#fff;border:1px solid var(--border);color:var(--ink)}
+    .btn-site:hover{border-color:var(--accent);color:var(--accent)}
+    .btn-logout{background:transparent;color:rgba(255,255,255,.55);font-size:.78rem;cursor:pointer;border:none;font-family:'Jost',sans-serif;display:flex;align-items:center;gap:6px}
+    .btn-logout:hover{color:#fff}
+    .content{flex:1;padding:28px;overflow-y:auto}
 
-/* TOAST */
-.toast{position:fixed;bottom:28px;right:28px;background:var(--success);color:#fff;padding:12px 20px;border-radius:4px;font-size:.85rem;z-index:9999;transform:translateY(60px);opacity:0;transition:all .35s;pointer-events:none}
-.toast.show{transform:none;opacity:1}
+    /* TOAST */
+    .toast{position:fixed;bottom:28px;right:28px;background:var(--success);color:#fff;padding:14px 24px;border-radius:4px;font-size:.875rem;z-index:9999;transform:translateY(80px);opacity:0;transition:all .35s;pointer-events:none;box-shadow:0 8px 24px rgba(0,0,0,.2)}
+    .toast.show{transform:none;opacity:1}
+    .toast.error{background:var(--danger)}
 
-/* SECTION PANELS */
-.panel{background:var(--surface);border:1px solid var(--border);border-radius:6px;margin-bottom:20px;overflow:hidden}
-.panel__head{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none}
-.panel__head h3{font-size:.9rem;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:8px}
-.panel__head h3 i{color:var(--gold);font-size:.8rem}
-.panel__head .toggle-icon{color:var(--muted);transition:transform .3s}
-.panel__head.open .toggle-icon{transform:rotate(180deg)}
-.panel__body{display:none;padding:20px}
-.panel__body.open{display:block}
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
-.field{display:flex;flex-direction:column;gap:4px;margin-bottom:12px}
-.field label{font-size:.75rem;font-weight:500;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
-.field input,.field select,.field textarea{border:1px solid var(--border);border-radius:3px;padding:9px 12px;font-family:'Jost',sans-serif;font-size:.875rem;color:var(--ink);outline:none;background:var(--bg);transition:border-color .25s,box-shadow .25s;width:100%}
-.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(43,77,63,.07);background:#fff}
-.field textarea{resize:vertical;min-height:80px}
-.field-hint{font-size:.72rem;color:var(--muted);margin-top:3px}
+    /* SECTION PANELS */
+    .panel{background:var(--surface);border:1px solid var(--border);border-radius:6px;margin-bottom:20px;overflow:hidden}
+    .panel__head{padding:16px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none}
+    .panel__head h3{font-size:.9rem;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:8px}
+    .panel__head h3 i{color:var(--gold);font-size:.8rem}
+    .panel__body{padding:20px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+    .field{display:flex;flex-direction:column;gap:4px;margin-bottom:14px}
+    .field label{font-size:.75rem;font-weight:500;color:var(--muted);letter-spacing:.04em;text-transform:uppercase}
+    .field input,.field select,.field textarea{border:1px solid var(--border);border-radius:3px;padding:9px 12px;font-family:'Jost',sans-serif;font-size:.875rem;color:var(--ink);outline:none;background:var(--bg);transition:border-color .25s,box-shadow .25s;width:100%}
+    .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(43,77,63,.07);background:#fff}
+    .field textarea{resize:vertical;min-height:80px}
+    .field-hint{font-size:.72rem;color:var(--muted);margin-top:3px}
 
-/* IMAGE UPLOAD */
-.img-upload{display:flex;align-items:center;gap:12px}
-.img-preview{width:72px;height:56px;border-radius:4px;object-fit:cover;border:1px solid var(--border);flex-shrink:0}
-.img-upload-actions{display:flex;flex-direction:column;gap:6px}
-.btn-upload{display:inline-flex;align-items:center;gap:6px;background:var(--bg);border:1px solid var(--border);padding:6px 12px;border-radius:3px;font-size:.78rem;font-weight:500;cursor:pointer;color:var(--ink);transition:all .25s}
-.btn-upload:hover{border-color:var(--accent);color:var(--accent)}
-.img-url-input{font-size:.78rem!important;padding:6px 10px!important}
+    /* IMAGE UPLOAD */
+    .img-upload{display:flex;align-items:center;gap:12px}
+    .img-preview{width:72px;height:56px;border-radius:4px;object-fit:cover;border:1px solid var(--border);flex-shrink:0;background:#eee}
+    .img-upload-actions{display:flex;flex-direction:column;gap:6px;flex:1}
+    .btn-upload{display:inline-flex;align-items:center;gap:6px;background:var(--bg);border:1px solid var(--border);padding:6px 12px;border-radius:3px;font-size:.78rem;font-weight:500;cursor:pointer;color:var(--ink);transition:all .25s;width:fit-content}
+    .btn-upload:hover{border-color:var(--accent);color:var(--accent)}
+    .img-url-input{font-size:.78rem!important;padding:6px 10px!important}
 
-/* COLOR PICKERS */
-.color-wrap{display:flex;align-items:center;gap:10px}
-.color-wrap input[type=color]{width:40px;height:36px;border:1px solid var(--border);border-radius:3px;cursor:pointer;padding:2px}
-.color-hex{font-size:.82rem;font-family:monospace;width:90px}
+    /* COLOR PICKERS */
+    .color-wrap{display:flex;align-items:center;gap:10px}
+    .color-wrap input[type=color]{width:40px;height:36px;border:1px solid var(--border);border-radius:3px;cursor:pointer;padding:2px}
+    .color-hex{font-size:.82rem;font-family:monospace;width:90px}
 
-/* TABS (for packages) */
-.tabs{display:flex;gap:4px;margin-bottom:16px;border-bottom:1px solid var(--border)}
-.tab{padding:8px 16px;font-size:.82rem;font-weight:500;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .25s}
-.tab.active{color:var(--accent);border-bottom-color:var(--accent)}
-.tab-pane{display:none}
-.tab-pane.active{display:block}
+    /* TABS (for packages) */
+    .tabs{display:flex;gap:4px;margin-bottom:16px;border-bottom:1px solid var(--border)}
+    .tab{padding:8px 16px;font-size:.82rem;font-weight:500;cursor:pointer;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .25s}
+    .tab.active{color:var(--accent);border-bottom-color:var(--accent)}
+    .tab-pane{display:none}
+    .tab-pane.active{display:block}
 
-/* STATS */
-.stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
-.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:20px;text-align:center}
-.stat-card span{display:block;font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--accent)}
-.stat-card p{font-size:.75rem;color:var(--muted);margin-top:4px}
+    /* STATS */
+    .stats-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:24px}
+    .stat-card{background:var(--surface);border:1px solid var(--border);border-radius:6px;padding:20px;text-align:center}
+    .stat-card span{display:block;font-family:'Cormorant Garamond',serif;font-size:2rem;color:var(--accent)}
+    .stat-card p{font-size:.75rem;color:var(--muted);margin-top:4px}
 
-/* QUICK LINKS */
-.quick-links{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
-.ql{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border:1px solid var(--border);border-radius:3px;font-size:.82rem;color:var(--muted);text-decoration:none;background:var(--surface);transition:all .25s}
-.ql:hover{border-color:var(--accent);color:var(--accent)}
-</style>
+    /* QUICK LINKS */
+    .quick-links{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px}
+    .ql{display:inline-flex;align-items:center;gap:6px;padding:9px 16px;border:1px solid var(--border);border-radius:3px;font-size:.82rem;color:var(--muted);text-decoration:none;background:var(--surface);transition:all .25s}
+    .ql:hover{border-color:var(--accent);color:var(--accent)}
+  </style>
 </head>
 <body>
 
@@ -129,7 +129,7 @@ body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--ink);min-hei
     <div class="topbar-actions">
       <button class="btn btn-reset" id="btnReset"><i class="fas fa-undo"></i> Reset Default</button>
       <button class="btn btn-save" id="btnSave"><i class="fas fa-save"></i> Simpan & Terapkan</button>
-      <a href="../index.html" target="_blank" class="btn btn-reset"><i class="fas fa-external-link-alt"></i> Lihat Website</a>
+      <a href="../index.html" target="_blank" class="btn btn-site"><i class="fas fa-external-link-alt"></i> Lihat Website</a>
     </div>
   </div>
 
@@ -148,21 +148,23 @@ body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--ink);min-hei
         <a class="ql" href="#" data-panel="colors"><i class="fas fa-palette"></i> Ganti Warna</a>
         <a class="ql" href="#" data-panel="hero"><i class="fas fa-image"></i> Ganti Foto Hero</a>
         <a class="ql" href="#" data-panel="video"><i class="fas fa-video"></i> Ganti Video</a>
+        <a class="ql" href="#" data-panel="packages"><i class="fas fa-box"></i> Edit Paket</a>
         <a class="ql" href="#" data-panel="portfolio"><i class="fas fa-images"></i> Update Portfolio</a>
+        <a class="ql" href="#" data-panel="testimoni"><i class="fas fa-star"></i> Edit Testimoni</a>
         <a class="ql" href="#" data-panel="kontak"><i class="fas fa-phone"></i> Edit Kontak</a>
         <a class="ql" href="../index.html" target="_blank"><i class="fas fa-eye"></i> Preview Website</a>
       </div>
       <div class="panel">
-        <div class="panel__head open"><h3><i class="fas fa-info-circle"></i> Panduan Penggunaan</h3></div>
-        <div class="panel__body open">
+        <div class="panel__head"><h3><i class="fas fa-info-circle"></i> Panduan Penggunaan</h3></div>
+        <div class="panel__body">
           <p style="font-size:.875rem;color:var(--muted);line-height:1.8">
             1. Klik menu di sidebar kiri untuk mengedit section yang diinginkan.<br/>
-            2. Untuk gambar, masukkan URL gambar atau upload file (gambar akan disimpan sebagai Data URL).<br/>
-            3. Untuk video, masukkan URL embed YouTube/Vimeo (format: https://www.youtube.com/embed/ID).<br/>
-            4. Klik <strong>Simpan & Terapkan</strong> di kanan atas — perubahan langsung aktif di website.<br/>
-            5. Klik <strong>Lihat Website</strong> untuk melihat hasilnya.<br/>
+            2. Untuk gambar, Anda bisa memasukkan link URL gambar atau upload langsung (gambar akan dioptimalkan otomatis).<br/>
+            3. Untuk video, masukkan link YouTube biasa atau embed (misal: https://www.youtube.com/watch?v=...).<br/>
+            4. Klik <strong>Simpan & Terapkan</strong> di pojok kanan atas — perubahan langsung aktif secara instan di website!<br/>
+            5. Klik <strong>Lihat Website</strong> untuk melihat hasil perubahannya.<br/>
             <br/>
-            <strong>Catatan:</strong> Data disimpan di browser (localStorage). Untuk backup, gunakan fitur Export di bawah.
+            <strong>Cadangan Data:</strong> Gunakan tombol Export di bawah untuk backup data CMS Anda.
           </p>
           <div style="margin-top:16px;display:flex;gap:10px">
             <button class="btn btn-save" id="btnExport"><i class="fas fa-download"></i> Export Data (JSON)</button>
@@ -174,30 +176,30 @@ body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--ink);min-hei
 
     <!-- SEO -->
     <div id="pane-seo" style="display:none">
-      <div class="panel"><div class="panel__head open"><h3><i class="fas fa-search"></i> SEO & Meta Tags</h3></div>
-      <div class="panel__body open">
+      <div class="panel"><div class="panel__head"><h3><i class="fas fa-search"></i> SEO & Meta Tags</h3></div>
+      <div class="panel__body">
         <div class="field"><label>Page Title (Tab browser & Google)</label><input type="text" id="seo-title"/><small class="field-hint">Maks. 60 karakter untuk SEO optimal</small></div>
         <div class="field"><label>Meta Description</label><textarea id="seo-desc" rows="3"></textarea><small class="field-hint">Maks. 160 karakter. Ini yang muncul di hasil pencarian Google.</small></div>
         <div class="grid-2">
           <div class="field"><label>OG Title (Social Media Share)</label><input type="text" id="seo-og-title"/></div>
           <div class="field"><label>OG Description</label><input type="text" id="seo-og-desc"/></div>
         </div>
-        <div class="field"><label>OG Image URL (thumbnail saat dibagikan di sosmed)</label><input type="text" id="seo-og-image" placeholder="https://... atau Assets/..."/></div>
+        <div class="field"><label>OG Image URL (thumbnail saat link dibagikan di WA/Sosmed)</label><input type="text" id="seo-og-image" placeholder="Assets/hero_main.jpg atau URL"/></div>
       </div></div>
     </div>
 
     <!-- COLORS & BRAND -->
     <div id="pane-colors" style="display:none">
-      <div class="panel"><div class="panel__head open"><h3><i class="fas fa-palette"></i> Warna & Brand</h3></div>
-      <div class="panel__body open">
+      <div class="panel"><div class="panel__head"><h3><i class="fas fa-palette"></i> Warna & Brand</h3></div>
+      <div class="panel__body">
         <div class="grid-2">
-          <div class="field"><label>Warna Aksen Utama (tombol CTA)</label>
+          <div class="field"><label>Warna Aksen Utama (tombol CTA, tema)</label>
             <div class="color-wrap">
               <input type="color" id="color-accent"/>
               <input type="text" class="color-hex" id="color-accent-hex" placeholder="#2B4D3F"/>
             </div>
           </div>
-          <div class="field"><label>Warna Gold (eyebrow, garis dekoratif)</label>
+          <div class="field"><label>Warna Gold (aksen teks, rating, dekorasi)</label>
             <div class="color-wrap">
               <input type="color" id="color-gold"/>
               <input type="text" class="color-hex" id="color-gold-hex" placeholder="#B8935B"/>
@@ -205,28 +207,25 @@ body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--ink);min-hei
           </div>
         </div>
         <hr style="border:none;border-top:1px solid var(--border);margin:16px 0"/>
-        <div class="field"><label>Nama Brand (HTML diizinkan, gunakan &lt;em&gt; untuk italic)</label><input type="text" id="brand-name" placeholder="Serena &lt;em&gt;Wedding&lt;/em&gt;"/></div>
+        <div class="field"><label>Nama Brand (gunakan &lt;em&gt; untuk tulisan miring)</label><input type="text" id="brand-name" placeholder="Serena &lt;em&gt;Wedding&lt;/em&gt;"/></div>
       </div></div>
     </div>
 
     <!-- HERO -->
     <div id="pane-hero" style="display:none">
-      <div class="panel"><div class="panel__head open"><h3><i class="fas fa-image"></i> Hero Section</h3></div>
-      <div class="panel__body open">
-        <div class="field"><label>Foto Hero</label>
+      <div class="panel"><div class="panel__head"><h3><i class="fas fa-image"></i> Hero Section</h3></div>
+      <div class="panel__body">
+        <div class="field"><label>Foto Banner Utama (Hero)</label>
           <div class="img-upload">
             <img class="img-preview" id="prev-hero-img" src="../Assets/hero_main.jpg" alt="preview"/>
             <div class="img-upload-actions">
               <label class="btn-upload"><i class="fas fa-upload"></i> Upload Foto<input type="file" accept="image/*" id="upload-hero-img" style="display:none"/></label>
-              <input type="text" class="img-url-input" id="hero-img" placeholder="URL atau Assets/..."/>
+              <input type="text" class="img-url-input" id="hero-img" placeholder="Assets/hero_main.jpg atau URL gambar"/>
             </div>
           </div>
         </div>
-        <div class="grid-2">
-          <div class="field"><label>Eyebrow (teks kecil di atas judul)</label><input type="text" id="hero-eyebrow"/></div>
-          <div></div>
-        </div>
-        <div class="field"><label>Judul Hero (HTML: gunakan &lt;br/&gt; untuk baris baru, &lt;em&gt; untuk italic)</label><textarea id="hero-title" rows="3"></textarea></div>
+        <div class="field"><label>Eyebrow (teks kecil di atas judul)</label><input type="text" id="hero-eyebrow"/></div>
+        <div class="field"><label>Judul Hero (gunakan &lt;br/&gt; untuk baris baru, &lt;em&gt; untuk teks miring)</label><textarea id="hero-title" rows="3"></textarea></div>
         <div class="field"><label>Sub-judul</label><textarea id="hero-sub" rows="2"></textarea></div>
         <div class="grid-3">
           <div class="field"><label>Stat 1 Angka</label><input type="text" id="stat1-num"/></div>
@@ -243,21 +242,19 @@ body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--ink);min-hei
 
     <!-- VIDEO -->
     <div id="pane-video" style="display:none">
-      <div class="panel"><div class="panel__head open"><h3><i class="fas fa-video"></i> Video / Showreel</h3></div>
-      <div class="panel__body open">
-        <div class="field"><label>URL Embed Video</label><input type="text" id="video-url" placeholder="https://www.youtube.com/embed/VIDEO_ID"/><small class="field-hint">Format YouTube: https://www.youtube.com/embed/ID — Format Vimeo: https://player.vimeo.com/video/ID</small></div>
+      <div class="panel"><div class="panel__head"><h3><i class="fas fa-video"></i> Video / Showreel</h3></div>
+      <div class="panel__body">
+        <div class="field"><label>Link Video YouTube / Vimeo</label><input type="text" id="video-url" placeholder="https://www.youtube.com/watch?v=... atau https://youtu.be/..."/><small class="field-hint">Mendukung link YouTube biasa, YouTube short/embed, maupun Vimeo.</small></div>
         <div class="field"><label>Judul Video Section</label><textarea id="video-title" rows="2"></textarea></div>
       </div></div>
     </div>
 
     <!-- ABOUT -->
     <div id="pane-about" style="display:none">
-      <div class="panel"><div class="panel__head open"><h3><i class="fas fa-heart"></i> Tentang Kami</h3></div>
-      <div class="panel__body open">
-        <div class="grid-2">
-          <div class="field"><label>Eyebrow</label><input type="text" id="about-eyebrow"/></div>
-        </div>
-        <div class="field"><label>Judul (HTML diizinkan)</label><textarea id="about-title" rows="2"></textarea></div>
+      <div class="panel"><div class="panel__head"><h3><i class="fas fa-heart"></i> Tentang Kami</h3></div>
+      <div class="panel__body">
+        <div class="field"><label>Eyebrow</label><input type="text" id="about-eyebrow"/></div>
+        <div class="field"><label>Judul (gunakan &lt;br/&gt; untuk baris baru)</label><textarea id="about-title" rows="2"></textarea></div>
         <div class="field"><label>Paragraf 1</label><textarea id="about-body1" rows="3"></textarea></div>
         <div class="field"><label>Paragraf 2</label><textarea id="about-body2" rows="3"></textarea></div>
         <div class="field"><label>Pull Quote</label><textarea id="about-quote" rows="2"></textarea></div>
@@ -266,7 +263,7 @@ body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--ink);min-hei
             <img class="img-preview" id="prev-about-img" src="../Assets/portfolio_3.jpg" alt="preview"/>
             <div class="img-upload-actions">
               <label class="btn-upload"><i class="fas fa-upload"></i> Upload Foto<input type="file" accept="image/*" id="upload-about-img" style="display:none"/></label>
-              <input type="text" class="img-url-input" id="about-img" placeholder="URL atau Assets/..."/>
+              <input type="text" class="img-url-input" id="about-img" placeholder="Assets/portfolio_3.jpg atau URL"/>
             </div>
           </div>
         </div>
@@ -279,39 +276,39 @@ body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--ink);min-hei
 
     <!-- PACKAGES -->
     <div id="pane-packages" style="display:none">
-      <div class="panel"><div class="panel__head open"><h3><i class="fas fa-box"></i> Paket Layanan</h3></div>
-      <div class="panel__body open">
-        <div class="grid-2" style="margin-bottom:16px">
+      <div class="panel"><div class="panel__head"><h3><i class="fas fa-box"></i> Paket Layanan</h3></div>
+      <div class="panel__body">
+        <div class="grid-2">
           <div class="field"><label>Judul Section</label><textarea id="pkg-title" rows="2"></textarea></div>
           <div class="field"><label>Sub Section</label><textarea id="pkg-sub" rows="2"></textarea></div>
         </div>
         <div class="tabs">
-          <div class="tab active" data-tab="pkg1">Intimate</div>
-          <div class="tab" data-tab="pkg2">Signature</div>
-          <div class="tab" data-tab="pkg3">Grand</div>
+          <div class="tab active" data-tab="pkg1">Paket 1 (Intimate)</div>
+          <div class="tab" data-tab="pkg2">Paket 2 (Signature - Populer)</div>
+          <div class="tab" data-tab="pkg3">Paket 3 (Grand)</div>
         </div>
         <div class="tab-pane active" id="tab-pkg1">
           <div class="grid-2"><div class="field"><label>Nama Paket</label><input type="text" id="pkg1-name"/></div><div class="field"><label>Harga</label><input type="text" id="pkg1-price"/></div></div>
           <div class="field"><label>Deskripsi Singkat</label><textarea id="pkg1-desc" rows="2"></textarea></div>
-          <div class="field"><label>Daftar Layanan (1 item per baris)</label><textarea id="pkg1-list" rows="6"></textarea></div>
+          <div class="field"><label>Daftar Layanan (1 baris = 1 poin centang)</label><textarea id="pkg1-list" rows="6"></textarea></div>
         </div>
         <div class="tab-pane" id="tab-pkg2">
           <div class="grid-2"><div class="field"><label>Nama Paket</label><input type="text" id="pkg2-name"/></div><div class="field"><label>Harga</label><input type="text" id="pkg2-price"/></div></div>
           <div class="field"><label>Deskripsi Singkat</label><textarea id="pkg2-desc" rows="2"></textarea></div>
-          <div class="field"><label>Daftar Layanan (1 item per baris)</label><textarea id="pkg2-list" rows="6"></textarea></div>
+          <div class="field"><label>Daftar Layanan (1 baris = 1 poin centang)</label><textarea id="pkg2-list" rows="6"></textarea></div>
         </div>
         <div class="tab-pane" id="tab-pkg3">
           <div class="grid-2"><div class="field"><label>Nama Paket</label><input type="text" id="pkg3-name"/></div><div class="field"><label>Harga</label><input type="text" id="pkg3-price"/></div></div>
           <div class="field"><label>Deskripsi Singkat</label><textarea id="pkg3-desc" rows="2"></textarea></div>
-          <div class="field"><label>Daftar Layanan (1 item per baris)</label><textarea id="pkg3-list" rows="6"></textarea></div>
+          <div class="field"><label>Daftar Layanan (1 baris = 1 poin centang)</label><textarea id="pkg3-list" rows="6"></textarea></div>
         </div>
       </div></div>
     </div>
 
     <!-- PROSES -->
     <div id="pane-proses" style="display:none">
-      <div class="panel"><div class="panel__head open"><h3><i class="fas fa-list-ol"></i> Alur Kerja</h3></div>
-      <div class="panel__body open">
+      <div class="panel"><div class="panel__head"><h3><i class="fas fa-list-ol"></i> Alur Kerja (5 Langkah)</h3></div>
+      <div class="panel__body">
         <div class="field" style="margin-bottom:20px"><label>Judul Section</label><textarea id="proses-title" rows="2"></textarea></div>
         <div id="proses-steps"></div>
       </div></div>
@@ -319,8 +316,8 @@ body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--ink);min-hei
 
     <!-- PORTFOLIO -->
     <div id="pane-portfolio" style="display:none">
-      <div class="panel"><div class="panel__head open"><h3><i class="fas fa-images"></i> Portofolio</h3></div>
-      <div class="panel__body open">
+      <div class="panel"><div class="panel__head"><h3><i class="fas fa-images"></i> Portofolio Foto</h3></div>
+      <div class="panel__body">
         <div class="field" style="margin-bottom:20px"><label>Judul Section</label><textarea id="porto-title" rows="2"></textarea></div>
         <div id="porto-items" style="display:grid;grid-template-columns:1fr 1fr;gap:16px"></div>
       </div></div>
@@ -328,8 +325,8 @@ body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--ink);min-hei
 
     <!-- TESTIMONI -->
     <div id="pane-testimoni" style="display:none">
-      <div class="panel"><div class="panel__head open"><h3><i class="fas fa-star"></i> Testimoni</h3></div>
-      <div class="panel__body open">
+      <div class="panel"><div class="panel__head"><h3><i class="fas fa-star"></i> Testimoni Klien (Foto & Video)</h3></div>
+      <div class="panel__body">
         <div class="field" style="margin-bottom:20px"><label>Judul Section</label><textarea id="testi-title" rows="2"></textarea></div>
         <div id="testi-items" style="display:grid;grid-template-columns:1fr 1fr;gap:16px"></div>
       </div></div>
@@ -337,16 +334,16 @@ body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--ink);min-hei
 
     <!-- FAQ -->
     <div id="pane-faq" style="display:none">
-      <div class="panel"><div class="panel__head open"><h3><i class="fas fa-question-circle"></i> FAQ</h3></div>
-      <div class="panel__body open">
+      <div class="panel"><div class="panel__head"><h3><i class="fas fa-question-circle"></i> FAQ (Tanya Jawab)</h3></div>
+      <div class="panel__body">
         <div id="faq-items"></div>
       </div></div>
     </div>
 
     <!-- KONTAK -->
     <div id="pane-kontak" style="display:none">
-      <div class="panel"><div class="panel__head open"><h3><i class="fas fa-phone"></i> Kontak & Booking</h3></div>
-      <div class="panel__body open">
+      <div class="panel"><div class="panel__head"><h3><i class="fas fa-phone"></i> Kontak & Booking</h3></div>
+      <div class="panel__body">
         <div class="grid-2">
           <div class="field"><label>Judul Section</label><textarea id="kontak-title" rows="2"></textarea></div>
           <div class="field"><label>Sub Section</label><textarea id="kontak-sub" rows="2"></textarea></div>
@@ -363,8 +360,8 @@ body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--ink);min-hei
 
     <!-- FOOTER -->
     <div id="pane-footer" style="display:none">
-      <div class="panel"><div class="panel__head open"><h3><i class="fas fa-align-center"></i> Footer</h3></div>
-      <div class="panel__body open">
+      <div class="panel"><div class="panel__head"><h3><i class="fas fa-align-center"></i> Footer</h3></div>
+      <div class="panel__body">
         <div class="field"><label>Tagline Footer</label><input type="text" id="footer-tagline"/></div>
         <div class="field"><label>Copyright Text</label><input type="text" id="footer-copyright"/></div>
       </div></div>
@@ -377,288 +374,696 @@ body{font-family:'Jost',sans-serif;background:var(--bg);color:var(--ink);min-hei
 
 <script>
 // ── AUTH CHECK ──
-if(sessionStorage.getItem('cms_auth')!=='1') window.location.href='login.html';
+const isAuth = sessionStorage.getItem('cms_auth') === '1' || localStorage.getItem('cms_auth') === '1';
+if(!isAuth) {
+  window.location.href = 'login.html';
+}
 
 // ── CONSTANTS ──
 const KEY = 'serena_cms_data';
 
 const DEFAULTS = {
-  colors:{ accent:'#2B4D3F', gold:'#B8935B' },
-  seo:{ title:'Serena Wedding | Wedding Organizer Profesional Jakarta', desc:'Wedding organizer berpengalaman dengan sentuhan personal.', ogTitle:'Serena Wedding | Wedding Organizer Profesional', ogDesc:'Wedding organizer berpengalaman.', ogImage:'Assets/hero_main.jpg' },
-  brand:{ name:'Serena <em>Wedding</em>' },
-  hero:{ img:'Assets/hero_main.jpg', eyebrow:'Wedding Organizer · Jakarta', title:'Hari yang paling<br/><em>Anda impikan,</em><br/>kami wujudkan.', sub:'Setiap detail pernikahan Anda kami rancang dengan penuh perhatian.', stat1num:'320+', stat1lbl:'Acara', stat2num:'8 Thn', stat2lbl:'Pengalaman', stat3num:'4.9★', stat3lbl:'Rating' },
-  video:{ url:'https://www.youtube.com/embed/dQw4w9WgXcQ', title:'Lihat bagaimana kami<br/>menciptakan keajaiban' },
-  about:{ eyebrow:'Tentang Kami', title:'Bukan sekadar vendor —<br/>kami teman perjalanan Anda.', body1:'Serena Wedding lahir dari keyakinan bahwa setiap pernikahan adalah kisah unik.', body2:'Kami percaya keajaiban sebuah hari-H terletak pada detail kecil yang dirasakan.', quote:'"Pernikahan yang sempurna bukan yang bebas hambatan — tapi yang dinikmati sepenuh hati."', img:'Assets/portfolio_3.jpg', badgeNum:'320+', badgeLbl:'Pasangan Bahagia' },
-  packages:{ eyebrow:'Layanan & Paket', title:'Pilih paket yang sesuai<br/>dengan impian Anda', sub:'Semua harga bersifat estimasi dan akan disesuaikan saat konsultasi.', pkg1:{ name:'Intimate', price:'Mulai Rp 25 juta', desc:'Untuk pernikahan privat yang hangat, maks. 150 tamu.', list:'Konsultasi & perencanaan konsep\nKoordinasi hari-H (8 jam)\nDekorasi sederhana & floral\nKoordinasi vendor\nRundown & briefing tim' }, pkg2:{ name:'Signature', price:'Mulai Rp 55 juta', desc:'Pernikahan berkesan untuk 150–400 tamu.', list:'Konsultasi & konsep penuh\nKoordinasi hari-H (12 jam)\nDekorasi custom & floral\nKoordinasi semua vendor\nMC profesional & entertainment\nCoordinator on-site (3 orang)\nSouvenir & stationery' }, pkg3:{ name:'Grand', price:'Kustom / Hubungi Kami', desc:'Pernikahan mewah 400+ tamu atau multi-hari.', list:'Full planning (venue s/d hari-H)\nKonsep eksklusif & desain custom\nDekorasi premium & lighting\nManajemen vendor lengkap\nLive music & entertainment\nTim 5+ koordinator\nLayanan luar kota & destinasi' } },
-  proses:{ title:'Dari impian menjadi<br/>kenangan nyata', p1:{ title:'Konsultasi', desc:'Kami mendengarkan impian, budget, dan preferensi Anda.' }, p2:{ title:'Konsep & Perencanaan', desc:'Tim kami merancang konsep, mood board, dan estimasi anggaran.' }, p3:{ title:'Persiapan', desc:'Koordinasi vendor, survei lokasi, fitting dekorasi, dan gladi bersih.' }, p4:{ title:'Hari-H', desc:'Tim kami hadir dari setup pertama hingga tamu terakhir.' }, p5:{ title:'Pasca Acara', desc:'Laporan dokumentasi, koordinasi pengembalian properti, dan follow-up.' } },
-  portfolio:{ title:'Kisah-kisah yang<br/>kami bantu tulis', p1:{ img:'Assets/portfolio_1.jpg', label:'Resepsi Mewah · Jakarta' }, p2:{ img:'Assets/portfolio_2.jpg', label:'Outdoor Garden · Bali' }, p3:{ img:'Assets/portfolio_3.jpg', label:'Adat Jawa · Yogyakarta' }, p4:{ img:'Assets/portfolio_4.jpg', label:'Boho Ceremony · Bandung' } },
-  testimoni:{ title:'Kata mereka tentang<br/>hari istimewa mereka', t1:{ quote:'Kami nggak perlu khawatir apapun di hari-H. Tim Serena benar-benar hadir untuk kami.', name:'Rizky & Amelia', pkg:'Paket Signature · Maret 2025' }, t2:{ quote:'Dekorasinya jauh melewati ekspektasi kami.', name:'Dimas & Nadia', pkg:'Paket Grand · November 2024' }, t3:{ quote:'Paket Intimate tapi hasilnya benar-benar mewah.', name:'Farhan & Sari', pkg:'Paket Intimate · Agustus 2025' }, t4:{ quote:'Komunikasinya luar biasa responsif dari awal sampai akhir.', name:'Aldi & Putri', pkg:'Paket Signature · Januari 2025' } },
-  faq:{ faq1:{ q:'Berapa lama sebaiknya booking sebelum hari-H?', a:'Kami menyarankan minimal 6–12 bulan untuk Signature dan Grand.' }, faq2:{ q:'Apakah paket bisa dikustomisasi?', a:'Tentu! Semua paket bersifat fleksibel.' }, faq3:{ q:'Berapa DP untuk booking?', a:'DP awal 30% dari total paket.' }, faq4:{ q:'Apakah melayani acara di luar kota?', a:'Ya! Kami melayani seluruh Indonesia.' }, faq5:{ q:'Bagaimana jika vendor pilihan sudah booked?', a:'Kami memiliki jaringan vendor terpercaya yang luas.' } },
-  kontak:{ title:'Mari mulai perjalanan<br/>indah ini bersama', sub:'Isi form di bawah, kami balas via WhatsApp dalam 24 jam.', waNum:'6285694061768', waDisplay:'0856-9406-1768', alamat:'Jl. [Nama Jalan], Jakarta Selatan', jam:'Senin–Sabtu, 09.00–18.00 WIB', email:'hello@serenawedding.id', ig:'#', tiktok:'#' },
-  footer:{ brand:'Serena <em>Wedding</em>', tagline:'Membantu Anda merayakan cinta dengan cara yang paling indah.', copyright:'© 2026 Serena Wedding. Hak Cipta Dilindungi.' }
+  colors: { accent: '#2B4D3F', gold: '#B8935B' },
+  seo: {
+    title: 'Serena Wedding | Wedding Organizer Profesional Jakarta',
+    desc: 'Wedding organizer berpengalaman dengan sentuhan personal. Rancang hari bahagia Anda bersama Serena Wedding.',
+    ogTitle: 'Serena Wedding | Wedding Organizer Profesional',
+    ogDesc: 'Wedding organizer berpengalaman dengan sentuhan personal.',
+    ogImage: 'Assets/hero_main.jpg'
+  },
+  brand: { name: 'Serena <em>Wedding</em>' },
+  hero: {
+    img: 'Assets/hero_main.jpg',
+    eyebrow: 'Wedding Organizer · Jakarta',
+    title: 'Hari yang paling<br/><em>Anda impikan,</em><br/>kami wujudkan.',
+    sub: 'Setiap detail pernikahan Anda kami rancang dengan penuh perhatian — dari dekorasi pertama hingga tamu terakhir pulang dengan senyum.',
+    stat1num: '320+', stat1lbl: 'Acara',
+    stat2num: '8 Thn', stat2lbl: 'Pengalaman',
+    stat3num: '4.9★', stat3lbl: 'Rating'
+  },
+  video: {
+    url: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+    title: 'Lihat bagaimana kami<br/>menciptakan keajaiban'
+  },
+  about: {
+    eyebrow: 'Tentang Kami',
+    title: 'Bukan sekadar vendor —<br/>kami teman perjalanan Anda.',
+    body1: 'Serena Wedding lahir dari keyakinan bahwa setiap pernikahan adalah kisah unik yang tak bisa diulang. Sejak 2016, kami mendampingi ratusan pasangan mewujudkan impian mereka.',
+    body2: 'Kami percaya keajaiban sebuah hari-H terletak pada detail kecil yang dirasakan, bukan sekadar dilihat.',
+    quote: '"Pernikahan yang sempurna bukan yang bebas hambatan — tapi yang dinikmati sepenuh hati."',
+    img: 'Assets/portfolio_3.jpg',
+    badgeNum: '320+',
+    badgeLbl: 'Pasangan Bahagia'
+  },
+  packages: {
+    eyebrow: 'Layanan & Paket',
+    title: 'Pilih paket yang sesuai<br/>dengan impian Anda',
+    sub: 'Semua harga bersifat estimasi dan akan disesuaikan saat konsultasi.',
+    pkg1: {
+      name: 'Intimate',
+      price: 'Mulai Rp 25 juta',
+      desc: 'Untuk pernikahan privat yang hangat, maks. 150 tamu.',
+      list: 'Konsultasi & perencanaan konsep\nKoordinasi hari-H (8 jam)\nDekorasi sederhana & floral\nKoordinasi vendor\nRundown & briefing tim'
+    },
+    pkg2: {
+      name: 'Signature',
+      price: 'Mulai Rp 55 juta',
+      desc: 'Pernikahan berkesan untuk 150–400 tamu.',
+      list: 'Konsultasi & konsep penuh\nKoordinasi hari-H (12 jam)\nDekorasi custom & floral\nKoordinasi semua vendor\nMC profesional & entertainment\nCoordinator on-site (3 orang)\nSouvenir & stationery'
+    },
+    pkg3: {
+      name: 'Grand',
+      price: 'Kustom / Hubungi Kami',
+      desc: 'Pernikahan mewah 400+ tamu atau multi-hari.',
+      list: 'Full planning (venue s/d hari-H)\nKonsep eksklusif & desain custom\nDekorasi premium & lighting\nManajemen vendor lengkap\nLive music & entertainment\nTim 5+ koordinator\nLayanan luar kota & destinasi'
+    }
+  },
+  proses: {
+    title: 'Dari impian menjadi<br/>kenangan nyata',
+    p1: { title: 'Konsultasi', desc: 'Kami mendengarkan impian, budget, dan preferensi Anda secara mendalam.' },
+    p2: { title: 'Konsep & Perencanaan', desc: 'Tim kami merancang konsep, mood board visual, dan estimasi anggaran transparan.' },
+    p3: { title: 'Persiapan', desc: 'Koordinasi vendor, survei lokasi bersama, fitting dekorasi, dan gladi bersih.' },
+    p4: { title: 'Hari-H', desc: 'Tim kami hadir dari setup pertama hingga tamu terakhir pulang bahagia.' },
+    p5: { title: 'Pasca Acara', desc: 'Laporan dokumentasi lengkap, koordinasi pengembalian properti, dan follow-up.' }
+  },
+  portfolio: {
+    title: 'Kisah-kisah yang<br/>kami bantu tulis',
+    p1: { img: 'Assets/portfolio_1.jpg', label: 'Resepsi Mewah · Jakarta' },
+    p2: { img: 'Assets/portfolio_2.jpg', label: 'Outdoor Garden · Bali' },
+    p3: { img: 'Assets/portfolio_3.jpg', label: 'Adat Jawa · Yogyakarta' },
+    p4: { img: 'Assets/portfolio_4.jpg', label: 'Boho Ceremony · Bandung' }
+  },
+  testimoni: {
+    title: 'Kata mereka tentang<br/>hari istimewa mereka',
+    t1: { quote: 'Kami nggak perlu khawatir apapun di hari-H. Tim Serena benar-benar hadir untuk kami — bahkan hal-hal kecil pun mereka perhatikan.', name: 'Rizky & Amelia', pkg: 'Paket Signature · Maret 2025', photo: '', video: '' },
+    t2: { quote: 'Dekorasinya jauh melewati ekspektasi kami. Setiap sudut terasa personal dan hangat, bukan template.', name: 'Dimas & Nadia', pkg: 'Paket Grand · November 2024', photo: '', video: '' },
+    t3: { quote: 'Paket Intimate tapi hasilnya benar-benar mewah. Tim Serena sangat kreatif dan membantu kami tanpa henti.', name: 'Farhan & Sari', pkg: 'Paket Intimate · Agustus 2025', photo: '', video: '' },
+    t4: { quote: 'Komunikasinya luar biasa responsif dari awal sampai akhir. Proses persiapan 6 bulan terasa ringan karena mereka pegang kemudi.', name: 'Aldi & Putri', pkg: 'Paket Signature · Januari 2025', photo: '', video: '' }
+  },
+  faq: {
+    faq1: { q: 'Berapa lama sebaiknya booking sebelum hari-H?', a: 'Kami menyarankan minimal 6–12 bulan sebelum tanggal pernikahan untuk Signature dan Grand. Paket Intimate minimal 3–4 bulan.' },
+    faq2: { q: 'Apakah paket bisa dikustomisasi?', a: 'Tentu! Semua paket bersifat fleksibel. Kami bisa menambahkan atau mengurangi layanan sesuai budget Anda.' },
+    faq3: { q: 'Berapa DP untuk booking?', a: 'DP awal 30% dari total paket. Pelunasan bertahap: 50% saat H-3 bulan, sisanya H-7 sebelum acara.' },
+    faq4: { q: 'Apakah melayani acara di luar kota?', a: 'Ya! Kami melayani seluruh Indonesia termasuk destinasi wedding Bali, Yogyakarta, Lombok, dan kota lainnya.' },
+    faq5: { q: 'Bagaimana jika vendor pilihan sudah booked?', a: 'Kami memiliki jaringan vendor terpercaya yang luas dan akan menyiapkan alternatif berkualitas setara.' }
+  },
+  kontak: {
+    title: 'Mari mulai perjalanan<br/>indah ini bersama',
+    sub: 'Isi form di bawah atau langsung hubungi kami via WhatsApp.',
+    waNum: '6285694061768',
+    waDisplay: '0856-9406-1768',
+    alamat: 'Jl. [Nama Jalan], Jakarta Selatan',
+    jam: 'Senin–Sabtu, 09.00–18.00 WIB',
+    email: 'hello@serenawedding.id',
+    ig: '#',
+    tiktok: '#'
+  },
+  footer: {
+    brand: 'Serena <em>Wedding</em>',
+    tagline: 'Membantu Anda merayakan cinta dengan cara yang paling indah.',
+    copyright: '© 2026 Serena Wedding. Hak Cipta Dilindungi.'
+  }
 };
 
-function getData(){
-  try{ const s=JSON.parse(localStorage.getItem(KEY)||'{}'); return deepMerge(DEFAULTS,s); }
-  catch(e){ return JSON.parse(JSON.stringify(DEFAULTS)); }
+function deepMerge(target, source){
+  if(!source || typeof source !== 'object') return target;
+  const out = Object.assign({}, target);
+  for(const k in source){
+    if(source[k] !== undefined && source[k] !== null){
+      if(typeof source[k] === 'object' && !Array.isArray(source[k])){
+        out[k] = deepMerge(target[k] || {}, source[k]);
+      } else {
+        out[k] = source[k];
+      }
+    }
+  }
+  return out;
 }
-function deepMerge(t,s){ const o=Object.assign({},t); for(const k in s){ if(s[k]&&typeof s[k]==='object'&&!Array.isArray(s[k])){ o[k]=deepMerge(t[k]||{},s[k]); }else{ o[k]=s[k]; } } return o; }
-function val(id){ const el=document.getElementById(id); return el?el.value:''; }
-function setVal(id,v){ const el=document.getElementById(id); if(el) el.value=v||''; }
-function showToast(msg='✅ Disimpan!'){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),3000); }
 
-// ── BUILD DYNAMIC FIELDS ──
+function getData(){
+  try{
+    const saved = JSON.parse(localStorage.getItem(KEY) || '{}');
+    return deepMerge(DEFAULTS, saved);
+  }catch(e){
+    return JSON.parse(JSON.stringify(DEFAULTS));
+  }
+}
+
+function val(id, fallback = ''){
+  const el = document.getElementById(id);
+  return el ? el.value : fallback;
+}
+
+function setVal(id, v){
+  const el = document.getElementById(id);
+  if(el) el.value = (v !== undefined && v !== null) ? v : '';
+}
+
+function fixImgPath(src){
+  if(!src) return '';
+  if(src.startsWith('data:') || src.startsWith('http://') || src.startsWith('https://') || src.startsWith('/')){
+    return src;
+  }
+  return '../' + src;
+}
+
+function showToast(msg = '✅ Disimpan!', isError = false){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.toggle('error', isError);
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3500);
+}
+
+// ── DYNAMIC BUILDERS ──
 function buildProses(d){
   const wrap = document.getElementById('proses-steps');
-  wrap.innerHTML = ['p1','p2','p3','p4','p5'].map((p,i)=>`
+  if(!wrap) return;
+  wrap.innerHTML = ['p1','p2','p3','p4','p5'].map((p, i) => {
+    const item = (d.proses && d.proses[p]) ? d.proses[p] : { title: '', desc: '' };
+    return `
     <div class="panel" style="margin-bottom:12px">
       <div class="panel__head" style="background:#f9f7f2;cursor:default"><h3><i class="fas fa-circle" style="font-size:.5rem;color:var(--gold)"></i> Tahap ${i+1}</h3></div>
-      <div class="panel__body open">
+      <div class="panel__body">
         <div class="grid-2">
-          <div class="field"><label>Judul Tahap</label><input type="text" id="p${i+1}-title" value="${d.proses[p].title}"/></div>
-          <div class="field"><label>Deskripsi</label><input type="text" id="p${i+1}-desc" value="${d.proses[p].desc}"/></div>
+          <div class="field"><label>Judul Tahap</label><input type="text" id="p${i+1}-title" value="${item.title || ''}"/></div>
+          <div class="field"><label>Deskripsi</label><input type="text" id="p${i+1}-desc" value="${item.desc || ''}"/></div>
         </div>
       </div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 }
 
 function buildPortfolio(d){
   const wrap = document.getElementById('porto-items');
-  wrap.innerHTML = [1,2,3,4].map(i=>`
+  if(!wrap) return;
+  wrap.innerHTML = [1,2,3,4].map(i => {
+    const item = (d.portfolio && d.portfolio['p'+i]) ? d.portfolio['p'+i] : { img: '', label: '' };
+    return `
     <div class="panel">
       <div class="panel__head" style="background:#f9f7f2;cursor:default"><h3><i class="fas fa-image" style="font-size:.8rem;color:var(--gold)"></i> Foto ${i}</h3></div>
-      <div class="panel__body open">
+      <div class="panel__body">
         <div class="img-upload" style="margin-bottom:10px">
-          <img class="img-preview" id="prev-porto${i}-img" src="../${d.portfolio['p'+i].img}" onerror="this.src=''" alt="preview"/>
+          <img class="img-preview" id="prev-porto${i}-img" src="${fixImgPath(item.img)}" onerror="this.src=''" alt="preview"/>
           <div class="img-upload-actions">
-            <label class="btn-upload"><i class="fas fa-upload"></i> Upload<input type="file" accept="image/*" id="upload-porto${i}-img" style="display:none" data-target="porto${i}-img" data-prev="prev-porto${i}-img"/></label>
-            <input type="text" class="img-url-input" id="porto${i}-img" value="${d.portfolio['p'+i].img}" placeholder="URL atau Assets/..."/>
+            <label class="btn-upload"><i class="fas fa-upload"></i> Upload<input type="file" accept="image/*" id="upload-porto${i}-img" style="display:none"/></label>
+            <input type="text" class="img-url-input" id="porto${i}-img" value="${item.img || ''}" placeholder="Assets/... atau URL"/>
           </div>
         </div>
-        <div class="field"><label>Label</label><input type="text" id="porto${i}-label" value="${d.portfolio['p'+i].label}"/></div>
+        <div class="field"><label>Label Foto</label><input type="text" id="porto${i}-label" value="${item.label || ''}"/></div>
       </div>
-    </div>`).join('');
-  // file upload listeners
-  [1,2,3,4].forEach(i=>{
-    document.getElementById(`upload-porto${i}-img`).addEventListener('change',function(){ handleImgUpload(this, `porto${i}-img`, `prev-porto${i}-img`); });
+    </div>`;
+  }).join('');
+
+  [1,2,3,4].forEach(i => {
+    const fileInp = document.getElementById(`upload-porto${i}-img`);
+    const txtInp  = document.getElementById(`porto${i}-img`);
+    if(fileInp){
+      fileInp.addEventListener('change', function(){ handleImgUpload(this, `porto${i}-img`, `prev-porto${i}-img`); });
+    }
+    if(txtInp){
+      txtInp.addEventListener('input', function(){
+        const prev = document.getElementById(`prev-porto${i}-img`);
+        if(prev) prev.src = fixImgPath(this.value);
+      });
+    }
   });
 }
 
 function buildTestimoni(d){
   const wrap = document.getElementById('testi-items');
-  wrap.innerHTML = ['t1','t2','t3','t4'].map((t,i)=>`
+  if(!wrap) return;
+  wrap.innerHTML = ['t1','t2','t3','t4'].map((t, i) => {
+    const item = (d.testimoni && d.testimoni[t]) ? d.testimoni[t] : { quote: '', name: '', pkg: '', photo: '', video: '' };
+    const hasPhoto = !!item.photo;
+    return `
     <div class="panel">
       <div class="panel__head" style="background:#f9f7f2;cursor:default"><h3><i class="fas fa-star" style="font-size:.8rem;color:var(--gold)"></i> Testimoni ${i+1}</h3></div>
-      <div class="panel__body open">
-        <div class="field"><label>Kutipan</label><textarea id="${t}-quote" rows="3">${d.testimoni[t].quote}</textarea></div>
+      <div class="panel__body">
+        <div class="field"><label>Kutipan Testimoni</label><textarea id="${t}-quote" rows="3">${item.quote || ''}</textarea></div>
         <div class="grid-2">
-          <div class="field"><label>Nama Pasangan</label><input type="text" id="${t}-name" value="${d.testimoni[t].name}"/></div>
-          <div class="field"><label>Paket & Tanggal</label><input type="text" id="${t}-pkg" value="${d.testimoni[t].pkg}"/></div>
+          <div class="field"><label>Nama Pasangan</label><input type="text" id="${t}-name" value="${item.name || ''}"/></div>
+          <div class="field"><label>Paket & Tanggal</label><input type="text" id="${t}-pkg" value="${item.pkg || ''}"/></div>
         </div>
-        <div class="field"><label>Foto Klien (opsional — ganti inisial dengan foto)</label>
+        <div class="field"><label>Foto Klien (Opsional)</label>
           <div class="img-upload">
-            <img class="img-preview" id="prev-${t}-photo" src="${d.testimoni[t].photo||''}" onerror="this.style.display='none'" style="${d.testimoni[t].photo?'':'display:none'}" alt=""/>
+            <img class="img-preview" id="prev-${t}-photo" src="${item.photo || ''}" onerror="this.style.display='none'" style="${hasPhoto ? '' : 'display:none'}" alt=""/>
             <div class="img-upload-actions">
-              <label class="btn-upload"><i class="fas fa-upload"></i> Upload Foto<input type="file" accept="image/*" id="upload-${t}-photo" data-target="${t}-photo" data-prev="prev-${t}-photo" style="display:none"/></label>
-              <input type="text" class="img-url-input" id="${t}-photo" value="${d.testimoni[t].photo||''}" placeholder="URL foto atau upload di atas"/>
+              <label class="btn-upload"><i class="fas fa-upload"></i> Upload Foto<input type="file" accept="image/*" id="upload-${t}-photo" style="display:none"/></label>
+              <input type="text" class="img-url-input" id="${t}-photo" value="${item.photo || ''}" placeholder="URL foto atau upload"/>
             </div>
           </div>
         </div>
-        <div class="field"><label>URL Video Embed (opsional — tampil di atas kutipan)</label>
-          <input type="text" id="${t}-video" value="${d.testimoni[t].video||''}" placeholder="https://www.youtube.com/embed/ID"/>
-          <small class="field-hint">Kosongkan jika tidak ada video</small>
+        <div class="field"><label>Link Video Testimoni (Opsional)</label>
+          <input type="text" id="${t}-video" value="${item.video || ''}" placeholder="https://www.youtube.com/watch?v=..."/>
+          <small class="field-hint">Kosongkan jika tidak ada video pada kartu testimoni ini.</small>
         </div>
       </div>
-    </div>`).join('');
-  // file upload listeners for testi photos
-  ['t1','t2','t3','t4'].forEach(t=>{
-    const inp = document.getElementById('upload-'+t+'-photo');
-    if(inp) inp.addEventListener('change',function(){ handleImgUpload(this, t+'-photo', 'prev-'+t+'-photo'); const p=document.getElementById('prev-'+t+'-photo'); if(p) p.style.display='block'; });
+    </div>`;
+  }).join('');
+
+  ['t1','t2','t3','t4'].forEach(t => {
+    const fileInp = document.getElementById(`upload-${t}-photo`);
+    const txtInp  = document.getElementById(`${t}-photo`);
+    if(fileInp){
+      fileInp.addEventListener('change', function(){
+        handleImgUpload(this, `${t}-photo`, `prev-${t}-photo`);
+        const p = document.getElementById(`prev-${t}-photo`);
+        if(p) p.style.display = 'block';
+      });
+    }
+    if(txtInp){
+      txtInp.addEventListener('input', function(){
+        const prev = document.getElementById(`prev-${t}-photo`);
+        if(prev){
+          if(this.value){
+            prev.src = fixImgPath(this.value);
+            prev.style.display = 'block';
+          } else {
+            prev.style.display = 'none';
+          }
+        }
+      });
+    }
   });
 }
 
 function buildFaq(d){
   const wrap = document.getElementById('faq-items');
-  wrap.innerHTML = ['faq1','faq2','faq3','faq4','faq5'].map((f,i)=>`
+  if(!wrap) return;
+  wrap.innerHTML = ['faq1','faq2','faq3','faq4','faq5'].map((f, i) => {
+    const item = (d.faq && d.faq[f]) ? d.faq[f] : { q: '', a: '' };
+    return `
     <div class="panel" style="margin-bottom:12px">
       <div class="panel__head" style="background:#f9f7f2;cursor:default"><h3>FAQ ${i+1}</h3></div>
-      <div class="panel__body open">
-        <div class="field"><label>Pertanyaan</label><input type="text" id="${f}-q" value="${d.faq[f].q}"/></div>
-        <div class="field"><label>Jawaban</label><textarea id="${f}-a" rows="3">${d.faq[f].a}</textarea></div>
+      <div class="panel__body">
+        <div class="field"><label>Pertanyaan</label><input type="text" id="${f}-q" value="${item.q || ''}"/></div>
+        <div class="field"><label>Jawaban</label><textarea id="${f}-a" rows="3">${item.a || ''}</textarea></div>
       </div>
-    </div>`).join('');
+    </div>`;
+  }).join('');
 }
 
 // ── POPULATE ALL FIELDS ──
 function populateAll(d){
   // SEO
-  setVal('seo-title', d.seo.title); setVal('seo-desc', d.seo.desc);
-  setVal('seo-og-title', d.seo.ogTitle); setVal('seo-og-desc', d.seo.ogDesc); setVal('seo-og-image', d.seo.ogImage);
+  setVal('seo-title', d.seo.title);
+  setVal('seo-desc', d.seo.desc);
+  setVal('seo-og-title', d.seo.ogTitle);
+  setVal('seo-og-desc', d.seo.ogDesc);
+  setVal('seo-og-image', d.seo.ogImage);
+
   // Colors
-  document.getElementById('color-accent').value = d.colors.accent;
-  document.getElementById('color-accent-hex').value = d.colors.accent;
-  document.getElementById('color-gold').value = d.colors.gold;
-  document.getElementById('color-gold-hex').value = d.colors.gold;
+  const cAccent = d.colors.accent || '#2B4D3F';
+  const cGold   = d.colors.gold   || '#B8935B';
+  const accPicker = document.getElementById('color-accent');
+  const accHex    = document.getElementById('color-accent-hex');
+  const goldPicker= document.getElementById('color-gold');
+  const goldHex   = document.getElementById('color-gold-hex');
+  if(accPicker) accPicker.value = cAccent;
+  if(accHex) accHex.value = cAccent;
+  if(goldPicker) goldPicker.value = cGold;
+  if(goldHex) goldHex.value = cGold;
+
+  // Brand
   setVal('brand-name', d.brand.name);
+
   // Hero
-  setVal('hero-img', d.hero.img); setVal('hero-eyebrow', d.hero.eyebrow);
-  setVal('hero-title', d.hero.title); setVal('hero-sub', d.hero.sub);
-  setVal('stat1-num',d.hero.stat1num); setVal('stat1-lbl',d.hero.stat1lbl);
-  setVal('stat2-num',d.hero.stat2num); setVal('stat2-lbl',d.hero.stat2lbl);
-  setVal('stat3-num',d.hero.stat3num); setVal('stat3-lbl',d.hero.stat3lbl);
-  const prevHero = document.getElementById('prev-hero-img'); if(prevHero) prevHero.src = '../'+d.hero.img;
+  setVal('hero-img', d.hero.img);
+  setVal('hero-eyebrow', d.hero.eyebrow);
+  setVal('hero-title', d.hero.title);
+  setVal('hero-sub', d.hero.sub);
+  setVal('stat1-num', d.hero.stat1num); setVal('stat1-lbl', d.hero.stat1lbl);
+  setVal('stat2-num', d.hero.stat2num); setVal('stat2-lbl', d.hero.stat2lbl);
+  setVal('stat3-num', d.hero.stat3num); setVal('stat3-lbl', d.hero.stat3lbl);
+  const prevHero = document.getElementById('prev-hero-img');
+  if(prevHero) prevHero.src = fixImgPath(d.hero.img);
+
   // Video
-  setVal('video-url', d.video.url); setVal('video-title', d.video.title);
+  setVal('video-url', d.video.url);
+  setVal('video-title', d.video.title);
+
   // About
-  setVal('about-eyebrow',d.about.eyebrow); setVal('about-title',d.about.title);
-  setVal('about-body1',d.about.body1); setVal('about-body2',d.about.body2);
-  setVal('about-quote',d.about.quote); setVal('about-img',d.about.img);
-  setVal('about-badgenum',d.about.badgeNum); setVal('about-badgelbl',d.about.badgeLbl);
-  const prevAbout = document.getElementById('prev-about-img'); if(prevAbout) prevAbout.src = d.about.img.startsWith('data:') ? d.about.img : '../'+d.about.img;
+  setVal('about-eyebrow', d.about.eyebrow);
+  setVal('about-title', d.about.title);
+  setVal('about-body1', d.about.body1);
+  setVal('about-body2', d.about.body2);
+  setVal('about-quote', d.about.quote);
+  setVal('about-img', d.about.img);
+  setVal('about-badgenum', d.about.badgeNum);
+  setVal('about-badgelbl', d.about.badgeLbl);
+  const prevAbout = document.getElementById('prev-about-img');
+  if(prevAbout) prevAbout.src = fixImgPath(d.about.img);
+
   // Packages
-  setVal('pkg-title',d.packages.title); setVal('pkg-sub',d.packages.sub);
-  ['pkg1','pkg2','pkg3'].forEach(p=>{ setVal(p+'-name',d.packages[p].name); setVal(p+'-price',d.packages[p].price); setVal(p+'-desc',d.packages[p].desc); setVal(p+'-list',d.packages[p].list); });
-  // Proses (built dynamically)
+  setVal('pkg-title', d.packages.title);
+  setVal('pkg-sub', d.packages.sub);
+  ['pkg1','pkg2','pkg3'].forEach(p => {
+    if(d.packages[p]){
+      setVal(p+'-name', d.packages[p].name);
+      setVal(p+'-price', d.packages[p].price);
+      setVal(p+'-desc', d.packages[p].desc);
+      setVal(p+'-list', d.packages[p].list);
+    }
+  });
+
+  // Dynamic Builders
   buildProses(d);
-  // Portfolio
   buildPortfolio(d);
-  // Testimoni
   buildTestimoni(d);
-  // FAQ
   buildFaq(d);
+
   // Kontak
-  setVal('kontak-title',d.kontak.title); setVal('kontak-sub',d.kontak.sub);
-  setVal('kontak-wa-num',d.kontak.waNum); setVal('kontak-wa-display',d.kontak.waDisplay);
-  setVal('kontak-alamat',d.kontak.alamat); setVal('kontak-jam',d.kontak.jam);
-  setVal('kontak-email',d.kontak.email); setVal('kontak-ig',d.kontak.ig); setVal('kontak-tiktok',d.kontak.tiktok);
+  setVal('kontak-title', d.kontak.title);
+  setVal('kontak-sub', d.kontak.sub);
+  setVal('kontak-wa-num', d.kontak.waNum);
+  setVal('kontak-wa-display', d.kontak.waDisplay);
+  setVal('kontak-alamat', d.kontak.alamat);
+  setVal('kontak-jam', d.kontak.jam);
+  setVal('kontak-email', d.kontak.email);
+  setVal('kontak-ig', d.kontak.ig);
+  setVal('kontak-tiktok', d.kontak.tiktok);
+
   // Footer
-  setVal('footer-tagline',d.footer.tagline); setVal('footer-copyright',d.footer.copyright);
+  setVal('footer-tagline', d.footer.tagline);
+  setVal('footer-copyright', d.footer.copyright);
 }
 
 // ── COLLECT DATA ──
 function collectData(){
-  const d = getData(); // start from current saved
-  d.seo = { title:val('seo-title'), desc:val('seo-desc'), ogTitle:val('seo-og-title'), ogDesc:val('seo-og-desc'), ogImage:val('seo-og-image') };
-  d.colors = { accent:val('color-accent-hex')||val('color-accent'), gold:val('color-gold-hex')||val('color-gold') };
-  d.brand = { name:val('brand-name') };
-  d.hero = { img:val('hero-img'), eyebrow:val('hero-eyebrow'), title:val('hero-title'), sub:val('hero-sub'), stat1num:val('stat1-num'), stat1lbl:val('stat1-lbl'), stat2num:val('stat2-num'), stat2lbl:val('stat2-lbl'), stat3num:val('stat3-num'), stat3lbl:val('stat3-lbl') };
-  d.video = { url:val('video-url'), title:val('video-title') };
-  d.about = { eyebrow:val('about-eyebrow'), title:val('about-title'), body1:val('about-body1'), body2:val('about-body2'), quote:val('about-quote'), img:val('about-img'), badgeNum:val('about-badgenum'), badgeLbl:val('about-badgelbl') };
-  d.packages = { eyebrow:d.packages.eyebrow, title:val('pkg-title'), sub:val('pkg-sub'), pkg1:{ name:val('pkg1-name'), price:val('pkg1-price'), desc:val('pkg1-desc'), list:val('pkg1-list') }, pkg2:{ name:val('pkg2-name'), price:val('pkg2-price'), desc:val('pkg2-desc'), list:val('pkg2-list') }, pkg3:{ name:val('pkg3-name'), price:val('pkg3-price'), desc:val('pkg3-desc'), list:val('pkg3-list') } };
-  d.proses = { title:val('proses-title') };
-  ['p1','p2','p3','p4','p5'].forEach((p,i)=>{ d.proses[p]={ title:val(`p${i+1}-title`), desc:val(`p${i+1}-desc`) }; });
-  d.portfolio = { title:val('porto-title') };
-  [1,2,3,4].forEach(i=>{ d.portfolio['p'+i]={ img:val(`porto${i}-img`), label:val(`porto${i}-label`) }; });
-  d.testimoni = { title:val('testi-title') };
-  ['t1','t2','t3','t4'].forEach(t=>{ d.testimoni[t]={ quote:val(`${t}-quote`), name:val(`${t}-name`), pkg:val(`${t}-pkg`), photo:val(`${t}-photo`), video:val(`${t}-video`) }; });
+  const base = getData();
+  const d = JSON.parse(JSON.stringify(base));
+
+  d.seo = {
+    title:   val('seo-title', d.seo.title),
+    desc:    val('seo-desc', d.seo.desc),
+    ogTitle: val('seo-og-title', d.seo.ogTitle),
+    ogDesc:  val('seo-og-desc', d.seo.ogDesc),
+    ogImage: val('seo-og-image', d.seo.ogImage)
+  };
+
+  d.colors = {
+    accent: val('color-accent-hex') || val('color-accent', d.colors.accent),
+    gold:   val('color-gold-hex')   || val('color-gold', d.colors.gold)
+  };
+
+  d.brand = {
+    name: val('brand-name', d.brand.name)
+  };
+
+  d.hero = {
+    img:      val('hero-img', d.hero.img),
+    eyebrow:  val('hero-eyebrow', d.hero.eyebrow),
+    title:    val('hero-title', d.hero.title),
+    sub:      val('hero-sub', d.hero.sub),
+    stat1num: val('stat1-num', d.hero.stat1num),
+    stat1lbl: val('stat1-lbl', d.hero.stat1lbl),
+    stat2num: val('stat2-num', d.hero.stat2num),
+    stat2lbl: val('stat2-lbl', d.hero.stat2lbl),
+    stat3num: val('stat3-num', d.hero.stat3num),
+    stat3lbl: val('stat3-lbl', d.hero.stat3lbl)
+  };
+
+  d.video = {
+    url:   val('video-url', d.video.url),
+    title: val('video-title', d.video.title)
+  };
+
+  d.about = {
+    eyebrow:  val('about-eyebrow', d.about.eyebrow),
+    title:    val('about-title', d.about.title),
+    body1:    val('about-body1', d.about.body1),
+    body2:    val('about-body2', d.about.body2),
+    quote:    val('about-quote', d.about.quote),
+    img:      val('about-img', d.about.img),
+    badgeNum: val('about-badgenum', d.about.badgeNum),
+    badgeLbl: val('about-badgelbl', d.about.badgeLbl)
+  };
+
+  d.packages = {
+    eyebrow: (d.packages && d.packages.eyebrow) ? d.packages.eyebrow : 'Layanan & Paket',
+    title:   val('pkg-title', d.packages.title),
+    sub:     val('pkg-sub', d.packages.sub),
+    pkg1: {
+      name:  val('pkg1-name', 'Intimate'),
+      price: val('pkg1-price', 'Mulai Rp 25 juta'),
+      desc:  val('pkg1-desc', ''),
+      list:  val('pkg1-list', '')
+    },
+    pkg2: {
+      name:  val('pkg2-name', 'Signature'),
+      price: val('pkg2-price', 'Mulai Rp 55 juta'),
+      desc:  val('pkg2-desc', ''),
+      list:  val('pkg2-list', '')
+    },
+    pkg3: {
+      name:  val('pkg3-name', 'Grand'),
+      price: val('pkg3-price', 'Kustom / Hubungi Kami'),
+      desc:  val('pkg3-desc', ''),
+      list:  val('pkg3-list', '')
+    }
+  };
+
+  d.proses = {
+    title: val('proses-title', d.proses.title)
+  };
+  ['p1','p2','p3','p4','p5'].forEach((p, i) => {
+    d.proses[p] = {
+      title: val(`p${i+1}-title`, ''),
+      desc:  val(`p${i+1}-desc`, '')
+    };
+  });
+
+  d.portfolio = {
+    title: val('porto-title', d.portfolio.title)
+  };
+  [1,2,3,4].forEach(i => {
+    d.portfolio['p'+i] = {
+      img:   val(`porto${i}-img`, ''),
+      label: val(`porto${i}-label`, '')
+    };
+  });
+
+  d.testimoni = {
+    title: val('testi-title', d.testimoni.title)
+  };
+  ['t1','t2','t3','t4'].forEach(t => {
+    d.testimoni[t] = {
+      quote: val(`${t}-quote`, ''),
+      name:  val(`${t}-name`, ''),
+      pkg:   val(`${t}-pkg`, ''),
+      photo: val(`${t}-photo`, ''),
+      video: val(`${t}-video`, '')
+    };
+  });
+
   d.faq = {};
-  ['faq1','faq2','faq3','faq4','faq5'].forEach(f=>{ d.faq[f]={ q:val(`${f}-q`), a:val(`${f}-a`) }; });
-  d.kontak = { title:val('kontak-title'), sub:val('kontak-sub'), waNum:val('kontak-wa-num'), waDisplay:val('kontak-wa-display'), alamat:val('kontak-alamat'), jam:val('kontak-jam'), email:val('kontak-email'), ig:val('kontak-ig'), tiktok:val('kontak-tiktok') };
-  d.footer = { brand:d.footer.brand, tagline:val('footer-tagline'), copyright:val('footer-copyright') };
+  ['faq1','faq2','faq3','faq4','faq5'].forEach(f => {
+    d.faq[f] = {
+      q: val(`${f}-q`, ''),
+      a: val(`${f}-a`, '')
+    };
+  });
+
+  d.kontak = {
+    title:     val('kontak-title', d.kontak.title),
+    sub:       val('kontak-sub', d.kontak.sub),
+    waNum:     val('kontak-wa-num', d.kontak.waNum),
+    waDisplay: val('kontak-wa-display', d.kontak.waDisplay),
+    alamat:    val('kontak-alamat', d.kontak.alamat),
+    jam:       val('kontak-jam', d.kontak.jam),
+    email:     val('kontak-email', d.kontak.email),
+    ig:        val('kontak-ig', d.kontak.ig),
+    tiktok:    val('kontak-tiktok', d.kontak.tiktok)
+  };
+
+  d.footer = {
+    brand:     (d.footer && d.footer.brand) ? d.footer.brand : 'Serena <em>Wedding</em>',
+    tagline:   val('footer-tagline', d.footer.tagline),
+    copyright: val('footer-copyright', d.footer.copyright)
+  };
+
   return d;
 }
 
-// ── IMAGE UPLOAD HANDLER ──
-function handleImgUpload(input, targetId, prevId){
-  const file = input.files[0]; if(!file) return;
+// ── IMAGE COMPRESSION & UPLOAD HANDLER ──
+// Compresses image client-side to prevent localStorage 5MB quota errors!
+function handleImgUpload(input, targetId, prevId, maxDim = 1200, quality = 0.78){
+  const file = input.files[0];
+  if(!file) return;
+
   const reader = new FileReader();
   reader.onload = function(e){
-    const dataUrl = e.target.result;
-    setVal(targetId, dataUrl);
-    const prev = document.getElementById(prevId);
-    if(prev) prev.src = dataUrl;
+    const img = new Image();
+    img.onload = function(){
+      let w = img.width;
+      let h = img.height;
+      if(w > maxDim || h > maxDim){
+        if(w > h){
+          h = Math.round((h * maxDim) / w);
+          w = maxDim;
+        } else {
+          w = Math.round((w * maxDim) / h);
+          h = maxDim;
+        }
+      }
+      const canvas = document.createElement('canvas');
+      canvas.width = w;
+      canvas.height = h;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0, w, h);
+      const compressedDataUrl = canvas.toDataURL('image/jpeg', quality);
+
+      setVal(targetId, compressedDataUrl);
+      const prev = document.getElementById(prevId);
+      if(prev){
+        prev.src = compressedDataUrl;
+        prev.style.display = 'block';
+      }
+      showToast('📸 Foto berhasil dimuat!');
+    };
+    img.src = e.target.result;
   };
   reader.readAsDataURL(file);
 }
 
 // ── NAVIGATION ──
 function showPane(name){
-  document.querySelectorAll('[id^="pane-"]').forEach(p=>p.style.display='none');
-  const el = document.getElementById('pane-'+name);
-  if(el) el.style.display='block';
-  document.querySelectorAll('#sideNav a').forEach(a=>{
-    a.classList.toggle('active', a.dataset.panel===name);
+  document.querySelectorAll('[id^="pane-"]').forEach(p => p.style.display = 'none');
+  const el = document.getElementById('pane-' + name);
+  if(el) el.style.display = 'block';
+
+  document.querySelectorAll('#sideNav a').forEach(a => {
+    a.classList.toggle('active', a.dataset.panel === name);
   });
-  const titles = { dashboard:'Dashboard', seo:'SEO & Meta', colors:'Warna & Brand', hero:'Hero Section', video:'Video / Showreel', about:'Tentang Kami', packages:'Paket Layanan', proses:'Alur Kerja', portfolio:'Portofolio', testimoni:'Testimoni', faq:'FAQ', kontak:'Kontak', footer:'Footer' };
-  document.getElementById('topbarTitle').textContent = titles[name]||name;
+
+  const titles = {
+    dashboard: 'Dashboard',
+    seo:       'SEO & Meta Tags',
+    colors:    'Warna & Brand',
+    hero:      'Hero Section',
+    video:     'Video / Showreel',
+    about:     'Tentang Kami',
+    packages:  'Paket Layanan',
+    proses:    'Alur Kerja',
+    portfolio: 'Portofolio',
+    testimoni: 'Testimoni',
+    faq:       'FAQ',
+    kontak:    'Kontak & Booking',
+    footer:    'Footer'
+  };
+  document.getElementById('topbarTitle').textContent = titles[name] || name;
 }
 
-// ── INIT ──
+// ── INITIALIZE ──
 document.addEventListener('DOMContentLoaded', function(){
   const d = getData();
   populateAll(d);
 
-  // Navigation
-  document.querySelectorAll('[data-panel]').forEach(a=>{
-    a.addEventListener('click',function(e){
+  // Navigation click
+  document.querySelectorAll('[data-panel]').forEach(a => {
+    a.addEventListener('click', function(e){
       e.preventDefault();
       showPane(this.dataset.panel);
     });
   });
 
-  // Save
-  document.getElementById('btnSave').addEventListener('click',function(){
-    const data = collectData();
-    localStorage.setItem(KEY, JSON.stringify(data));
-    showToast('✅ Disimpan! Refresh website untuk melihat perubahan.');
+  // Save button
+  document.getElementById('btnSave').addEventListener('click', function(){
+    try{
+      const data = collectData();
+      localStorage.setItem(KEY, JSON.stringify(data));
+      showToast('✅ Perubahan berhasil disimpan & langsung aktif di website!');
+    } catch(err){
+      console.error('Save error:', err);
+      if(err.name === 'QuotaExceededError' || err.code === 22){
+        showToast('⚠️ Penyimpanan browser penuh. Coba gunakan link URL gambar alih-alih upload.', true);
+      } else {
+        showToast('❌ Gagal menyimpan data: ' + err.message, true);
+      }
+    }
   });
 
-  // Reset
-  document.getElementById('btnReset').addEventListener('click',function(){
-    if(!confirm('Reset semua konten ke default? Perubahan yang belum disimpan akan hilang.')) return;
+  // Reset button
+  document.getElementById('btnReset').addEventListener('click', function(){
+    if(!confirm('Reset semua konten ke default? Perubahan yang disimpan akan diganti dengan data asli.')) return;
     localStorage.removeItem(KEY);
     populateAll(DEFAULTS);
-    showToast('🔄 Reset ke default berhasil!');
+    showToast('🔄 Konten berhasil di-reset ke default!');
   });
 
-  // Logout
-  document.getElementById('logoutBtn').addEventListener('click',function(){
+  // Logout button
+  document.getElementById('logoutBtn').addEventListener('click', function(){
     sessionStorage.removeItem('cms_auth');
-    window.location.href='login.html';
+    localStorage.removeItem('cms_auth');
+    window.location.href = 'login.html';
   });
 
-  // Color sync (picker ↔ hex input)
-  ['accent','gold'].forEach(c=>{
+  // Color picker sync
+  ['accent','gold'].forEach(c => {
     const picker = document.getElementById(`color-${c}`);
     const hex    = document.getElementById(`color-${c}-hex`);
-    picker.addEventListener('input',()=>{ hex.value=picker.value; });
-    hex.addEventListener('input',()=>{ if(/^#[0-9A-Fa-f]{6}$/.test(hex.value)) picker.value=hex.value; });
+    if(picker && hex){
+      picker.addEventListener('input', () => { hex.value = picker.value; });
+      hex.addEventListener('input', () => {
+        if(/^#[0-9A-Fa-f]{6}$/.test(hex.value)) picker.value = hex.value;
+      });
+    }
   });
 
-  // Hero img upload
-  document.getElementById('upload-hero-img').addEventListener('change',function(){ handleImgUpload(this,'hero-img','prev-hero-img'); });
-  document.getElementById('about-img').addEventListener('input',function(){ document.getElementById('prev-about-img').src = this.value.startsWith('data:')?this.value:'../'+this.value; });
-  document.getElementById('upload-about-img').addEventListener('change',function(){ handleImgUpload(this,'about-img','prev-about-img'); });
+  // Hero image inputs
+  const upHero = document.getElementById('upload-hero-img');
+  const txtHero= document.getElementById('hero-img');
+  if(upHero) upHero.addEventListener('change', function(){ handleImgUpload(this, 'hero-img', 'prev-hero-img'); });
+  if(txtHero) txtHero.addEventListener('input', function(){
+    const prev = document.getElementById('prev-hero-img');
+    if(prev) prev.src = fixImgPath(this.value);
+  });
+
+  // About image inputs
+  const upAbout = document.getElementById('upload-about-img');
+  const txtAbout= document.getElementById('about-img');
+  if(upAbout) upAbout.addEventListener('change', function(){ handleImgUpload(this, 'about-img', 'prev-about-img'); });
+  if(txtAbout) txtAbout.addEventListener('input', function(){
+    const prev = document.getElementById('prev-about-img');
+    if(prev) prev.src = fixImgPath(this.value);
+  });
 
   // Package tabs
-  document.querySelectorAll('.tab').forEach(tab=>{
-    tab.addEventListener('click',function(){
-      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-      document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', function(){
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-pane').forEach(p => p.classList.remove('active'));
       this.classList.add('active');
-      document.getElementById('tab-'+this.dataset.tab).classList.add('active');
+      const targetPane = document.getElementById('tab-' + this.dataset.tab);
+      if(targetPane) targetPane.classList.add('active');
     });
   });
 
-  // Export
-  document.getElementById('btnExport').addEventListener('click',function(){
+  // Export JSON
+  document.getElementById('btnExport').addEventListener('click', function(){
     const data = getData();
-    const blob = new Blob([JSON.stringify(data,null,2)],{type:'application/json'});
-    const a = document.createElement('a'); a.href=URL.createObjectURL(blob);
-    a.download='serena-cms-backup.json'; a.click();
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'serena-cms-backup.json';
+    a.click();
   });
 
-  // Import
-  document.getElementById('importFile').addEventListener('change',function(){
-    const file = this.files[0]; if(!file) return;
+  // Import JSON
+  document.getElementById('importFile').addEventListener('change', function(){
+    const file = this.files[0];
+    if(!file) return;
     const reader = new FileReader();
     reader.onload = function(e){
       try{
         const data = JSON.parse(e.target.result);
         localStorage.setItem(KEY, JSON.stringify(data));
         populateAll(getData());
-        showToast('✅ Import berhasil!');
-      }catch(err){ alert('File JSON tidak valid.'); }
+        showToast('✅ Data CMS berhasil di-import!');
+      }catch(err){
+        alert('File JSON tidak valid.');
+      }
     };
     reader.readAsText(file);
   });

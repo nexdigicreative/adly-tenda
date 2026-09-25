@@ -32,25 +32,25 @@
 <div class="card">
   <div class="logo">
     <h1>Serena <em>Wedding</em></h1>
-    <p>Admin Panel</p>
+    <p>Admin CMS Panel</p>
   </div>
   <div class="err" id="errMsg">Username atau password salah.</div>
   <form id="loginForm">
     <div class="field">
       <label for="username">Username</label>
-      <div class="inp-wrap"><input type="text" id="username" autocomplete="username" placeholder="admin" required/></div>
+      <div class="inp-wrap"><input type="text" id="username" autocomplete="username" placeholder="admin" value="admin" required/></div>
     </div>
     <div class="field">
       <label for="password">Password</label>
       <div class="inp-wrap">
-        <input type="password" id="password" autocomplete="current-password" placeholder="••••••••" required/>
+        <input type="password" id="password" autocomplete="current-password" placeholder="••••••••" value="serena2026" required/>
         <button type="button" class="toggle-pw" id="togglePw" aria-label="Tampilkan password"><i class="fas fa-eye"></i></button>
       </div>
     </div>
     <button type="submit" class="btn-login">Masuk ke Dashboard</button>
   </form>
-  <div class="hint">Default login:<br/>Username: <code>admin</code> &nbsp;|&nbsp; Password: <code>serena2026</code></div>
-  <a href="../index.html" class="back">← Kembali ke website</a>
+  <div class="hint">Login CMS Default:<br/>Username: <code>admin</code> &nbsp;|&nbsp; Password: <code>serena2026</code></div>
+  <a href="../index.html" class="back">← Kembali ke Website</a>
 </div>
 <script>
   const CREDS = { username:'admin', password:'serena2026' };
@@ -67,14 +67,17 @@
     const err = document.getElementById('errMsg');
     if(u===CREDS.username && p===CREDS.password){
       sessionStorage.setItem('cms_auth','1');
+      localStorage.setItem('cms_auth','1');
       window.location.href='dashboard.html';
     } else {
       err.style.display='block';
       document.getElementById('password').value='';
     }
   });
-  // Already logged in?
-  if(sessionStorage.getItem('cms_auth')==='1') window.location.href='dashboard.html';
+  // If already logged in, redirect directly to dashboard
+  if(sessionStorage.getItem('cms_auth')==='1' || localStorage.getItem('cms_auth')==='1'){
+    window.location.href='dashboard.html';
+  }
 </script>
 </body>
 </html>
