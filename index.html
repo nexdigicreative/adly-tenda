@@ -226,20 +226,36 @@
     </div>
     <div class="testi-grid">
       <div class="testi reveal">
+        <div class="testi__video" id="cms-t1-video-wrap" style="display:none"><iframe id="cms-t1-video" src="" frameborder="0" allow="autoplay;encrypted-media" allowfullscreen loading="lazy"></iframe></div>
         <p class="testi__quote" id="cms-t1-quote">"Kami nggak perlu khawatir apapun di hari-H. Tim Serena benar-benar hadir untuk kami — bahkan hal-hal kecil pun mereka perhatikan."</p>
-        <div class="testi__meta"><span class="testi__av">R</span><div><p class="testi__name" id="cms-t1-name">Rizky & Amelia</p><p class="testi__pkg" id="cms-t1-pkg">Paket Signature · Maret 2025</p></div></div>
+        <div class="testi__meta">
+          <div class="testi__av-wrap"><img class="testi__photo" id="cms-t1-photo" src="" alt=""/><span class="testi__av" id="cms-t1-av">R</span></div>
+          <div><p class="testi__name" id="cms-t1-name">Rizky & Amelia</p><p class="testi__pkg" id="cms-t1-pkg">Paket Signature · Maret 2025</p></div>
+        </div>
       </div>
       <div class="testi reveal">
+        <div class="testi__video" id="cms-t2-video-wrap" style="display:none"><iframe id="cms-t2-video" src="" frameborder="0" allow="autoplay;encrypted-media" allowfullscreen loading="lazy"></iframe></div>
         <p class="testi__quote" id="cms-t2-quote">"Dekorasinya jauh melewati ekspektasi kami. Setiap sudut terasa personal dan hangat, bukan template."</p>
-        <div class="testi__meta"><span class="testi__av">D</span><div><p class="testi__name" id="cms-t2-name">Dimas & Nadia</p><p class="testi__pkg" id="cms-t2-pkg">Paket Grand · November 2024</p></div></div>
+        <div class="testi__meta">
+          <div class="testi__av-wrap"><img class="testi__photo" id="cms-t2-photo" src="" alt=""/><span class="testi__av" id="cms-t2-av">D</span></div>
+          <div><p class="testi__name" id="cms-t2-name">Dimas & Nadia</p><p class="testi__pkg" id="cms-t2-pkg">Paket Grand · November 2024</p></div>
+        </div>
       </div>
       <div class="testi reveal">
+        <div class="testi__video" id="cms-t3-video-wrap" style="display:none"><iframe id="cms-t3-video" src="" frameborder="0" allow="autoplay;encrypted-media" allowfullscreen loading="lazy"></iframe></div>
         <p class="testi__quote" id="cms-t3-quote">"Paket Intimate tapi hasilnya benar-benar mewah. Tim Serena sangat kreatif dan membantu kami tanpa henti."</p>
-        <div class="testi__meta"><span class="testi__av">F</span><div><p class="testi__name" id="cms-t3-name">Farhan & Sari</p><p class="testi__pkg" id="cms-t3-pkg">Paket Intimate · Agustus 2025</p></div></div>
+        <div class="testi__meta">
+          <div class="testi__av-wrap"><img class="testi__photo" id="cms-t3-photo" src="" alt=""/><span class="testi__av" id="cms-t3-av">F</span></div>
+          <div><p class="testi__name" id="cms-t3-name">Farhan & Sari</p><p class="testi__pkg" id="cms-t3-pkg">Paket Intimate · Agustus 2025</p></div>
+        </div>
       </div>
       <div class="testi reveal">
+        <div class="testi__video" id="cms-t4-video-wrap" style="display:none"><iframe id="cms-t4-video" src="" frameborder="0" allow="autoplay;encrypted-media" allowfullscreen loading="lazy"></iframe></div>
         <p class="testi__quote" id="cms-t4-quote">"Komunikasinya luar biasa responsif dari awal sampai akhir. Proses persiapan 6 bulan terasa ringan karena mereka pegang kemudi."</p>
-        <div class="testi__meta"><span class="testi__av">A</span><div><p class="testi__name" id="cms-t4-name">Aldi & Putri</p><p class="testi__pkg" id="cms-t4-pkg">Paket Signature · Januari 2025</p></div></div>
+        <div class="testi__meta">
+          <div class="testi__av-wrap"><img class="testi__photo" id="cms-t4-photo" src="" alt=""/><span class="testi__av" id="cms-t4-av">A</span></div>
+          <div><p class="testi__name" id="cms-t4-name">Aldi & Putri</p><p class="testi__pkg" id="cms-t4-pkg">Paket Signature · Januari 2025</p></div>
+        </div>
       </div>
     </div>
   </div>
@@ -316,8 +332,15 @@
 <!-- Floating WA -->
 <a href="https://wa.me/6285694061768?text=Halo%20Serena%20Wedding%2C%20saya%20ingin%20berkonsultasi." id="cms-wa-float" class="wa-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
-<!-- Admin link (hidden) -->
-<a href="admin/login.html" style="position:fixed;bottom:28px;left:28px;width:36px;height:36px;background:rgba(0,0,0,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);font-size:0.75rem;text-decoration:none;z-index:999;" title="Admin"><i class="fas fa-lock"></i></a>
+<!-- Admin CMS Button -->
+<a href="admin/login.html" id="adminBtn" class="admin-btn" title="CMS Admin Panel">
+  <i class="fas fa-sliders-h"></i><span>Admin</span>
+</a>
+<style>
+.admin-btn{position:fixed;bottom:90px;right:28px;background:#1A1A18;color:rgba(255,255,255,0.7);padding:8px 14px;border-radius:20px;font-family:'Jost',sans-serif;font-size:.75rem;font-weight:500;display:flex;align-items:center;gap:6px;text-decoration:none;z-index:998;opacity:0.6;transition:opacity .3s,background .3s;box-shadow:0 2px 12px rgba(0,0,0,.25);letter-spacing:.04em}
+.admin-btn:hover{opacity:1;background:#2B4D3F;color:#fff}
+.admin-btn i{font-size:.8rem}
+</style>
 
 <script src="cms.js"></script>
 <script src="script.js"></script>

@@ -62,10 +62,10 @@
     },
     testimoni: {
       title:'Kata mereka tentang<br/>hari istimewa mereka',
-      t1:{ quote:'Kami nggak perlu khawatir apapun di hari-H. Tim Serena benar-benar hadir untuk kami.', name:'Rizky & Amelia', pkg:'Paket Signature · Maret 2025' },
-      t2:{ quote:'Dekorasinya jauh melewati ekspektasi kami. Setiap sudut terasa personal dan hangat.', name:'Dimas & Nadia', pkg:'Paket Grand · November 2024' },
-      t3:{ quote:'Paket Intimate tapi hasilnya benar-benar mewah. Tim Serena sangat kreatif.', name:'Farhan & Sari', pkg:'Paket Intimate · Agustus 2025' },
-      t4:{ quote:'Komunikasinya luar biasa responsif dari awal sampai akhir.', name:'Aldi & Putri', pkg:'Paket Signature · Januari 2025' }
+      t1:{ quote:'Kami nggak perlu khawatir apapun di hari-H. Tim Serena benar-benar hadir untuk kami.', name:'Rizky & Amelia', pkg:'Paket Signature · Maret 2025', photo:'', video:'' },
+      t2:{ quote:'Dekorasinya jauh melewati ekspektasi kami. Setiap sudut terasa personal dan hangat.', name:'Dimas & Nadia', pkg:'Paket Grand · November 2024', photo:'', video:'' },
+      t3:{ quote:'Paket Intimate tapi hasilnya benar-benar mewah. Tim Serena sangat kreatif.', name:'Farhan & Sari', pkg:'Paket Intimate · Agustus 2025', photo:'', video:'' },
+      t4:{ quote:'Komunikasinya luar biasa responsif dari awal sampai akhir.', name:'Aldi & Putri', pkg:'Paket Signature · Januari 2025', photo:'', video:'' }
     },
     faq: {
       faq1:{ q:'Berapa lama sebaiknya booking sebelum hari-H?', a:'Kami menyarankan minimal 6–12 bulan untuk Signature dan Grand. Paket Intimate minimal 3–4 bulan.' },
@@ -211,6 +211,20 @@
       set(`cms-${t}-quote`, tk.quote);
       set(`cms-${t}-name`, tk.name);
       set(`cms-${t}-pkg`, tk.pkg);
+      // Photo
+      const photoEl = document.getElementById(`cms-${t}-photo`);
+      const avEl    = document.getElementById(`cms-${t}-av`);
+      if(photoEl && avEl){
+        if(tk.photo){ photoEl.src=tk.photo; photoEl.style.display='block'; avEl.style.display='none'; }
+        else { photoEl.style.display='none'; avEl.style.display='flex'; }
+      }
+      // Video
+      const vidWrap = document.getElementById(`cms-${t}-video-wrap`);
+      const vidEl   = document.getElementById(`cms-${t}-video`);
+      if(vidWrap && vidEl){
+        if(tk.video){ vidEl.src=tk.video; vidWrap.style.display='block'; }
+        else { vidWrap.style.display='none'; }
+      }
     });
 
     // FAQ

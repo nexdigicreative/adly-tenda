@@ -455,8 +455,26 @@ function buildTestimoni(d){
           <div class="field"><label>Nama Pasangan</label><input type="text" id="${t}-name" value="${d.testimoni[t].name}"/></div>
           <div class="field"><label>Paket & Tanggal</label><input type="text" id="${t}-pkg" value="${d.testimoni[t].pkg}"/></div>
         </div>
+        <div class="field"><label>Foto Klien (opsional — ganti inisial dengan foto)</label>
+          <div class="img-upload">
+            <img class="img-preview" id="prev-${t}-photo" src="${d.testimoni[t].photo||''}" onerror="this.style.display='none'" style="${d.testimoni[t].photo?'':'display:none'}" alt=""/>
+            <div class="img-upload-actions">
+              <label class="btn-upload"><i class="fas fa-upload"></i> Upload Foto<input type="file" accept="image/*" id="upload-${t}-photo" data-target="${t}-photo" data-prev="prev-${t}-photo" style="display:none"/></label>
+              <input type="text" class="img-url-input" id="${t}-photo" value="${d.testimoni[t].photo||''}" placeholder="URL foto atau upload di atas"/>
+            </div>
+          </div>
+        </div>
+        <div class="field"><label>URL Video Embed (opsional — tampil di atas kutipan)</label>
+          <input type="text" id="${t}-video" value="${d.testimoni[t].video||''}" placeholder="https://www.youtube.com/embed/ID"/>
+          <small class="field-hint">Kosongkan jika tidak ada video</small>
+        </div>
       </div>
     </div>`).join('');
+  // file upload listeners for testi photos
+  ['t1','t2','t3','t4'].forEach(t=>{
+    const inp = document.getElementById('upload-'+t+'-photo');
+    if(inp) inp.addEventListener('change',function(){ handleImgUpload(this, t+'-photo', 'prev-'+t+'-photo'); const p=document.getElementById('prev-'+t+'-photo'); if(p) p.style.display='block'; });
+  });
 }
 
 function buildFaq(d){
@@ -532,7 +550,7 @@ function collectData(){
   d.portfolio = { title:val('porto-title') };
   [1,2,3,4].forEach(i=>{ d.portfolio['p'+i]={ img:val(`porto${i}-img`), label:val(`porto${i}-label`) }; });
   d.testimoni = { title:val('testi-title') };
-  ['t1','t2','t3','t4'].forEach(t=>{ d.testimoni[t]={ quote:val(`${t}-quote`), name:val(`${t}-name`), pkg:val(`${t}-pkg`) }; });
+  ['t1','t2','t3','t4'].forEach(t=>{ d.testimoni[t]={ quote:val(`${t}-quote`), name:val(`${t}-name`), pkg:val(`${t}-pkg`), photo:val(`${t}-photo`), video:val(`${t}-video`) }; });
   d.faq = {};
   ['faq1','faq2','faq3','faq4','faq5'].forEach(f=>{ d.faq[f]={ q:val(`${f}-q`), a:val(`${f}-a`) }; });
   d.kontak = { title:val('kontak-title'), sub:val('kontak-sub'), waNum:val('kontak-wa-num'), waDisplay:val('kontak-wa-display'), alamat:val('kontak-alamat'), jam:val('kontak-jam'), email:val('kontak-email'), ig:val('kontak-ig'), tiktok:val('kontak-tiktok') };
