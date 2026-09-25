@@ -1,40 +1,45 @@
-# 🏕️ Adly Tenda
+# 🏕️ Adly Tenda — Company Profile
 
-Website rental tenda & dekorasi event.
+Website company profile **Adly Tenda** — Penyedia tenda berkualitas.
 
-## 📁 Struktur Project
+## 📁 Struktur Proyek
 
 ```
 Adly-tenda/
-├── index.html      # Halaman utama
-├── style.css       # Styling
-├── script.js       # Logika interaksi
-└── Assets/         # Gambar & media
+├── index.html      → Halaman utama
+├── style.css       → Styling / tampilan
+├── script.js       → Interaksi / animasi
+├── Assets/         → Gambar, ikon, dan media
+└── README.md       → Dokumentasi ini
 ```
 
 ## 🔄 Alur Kerja (Workflow)
 
-```
-Edit Lokal → Testing → Git Commit → Deploy
-```
-
-### 1. Edit Lokal
-Edit file di folder ini menggunakan editor favorit kamu.
-
-### 2. Testing
-Buka `index.html` langsung di browser, atau gunakan Live Server (VS Code extension).
-
-### 3. Git Commit & Push
+### 1️⃣ Edit Lokal
 ```bash
+code /Users/macbook/Projects/Adly-tenda
+```
+
+### 2️⃣ Testing Lokal
+```bash
+cd /Users/macbook/Projects/Adly-tenda
+python3 -m http.server 8080
+# Buka: http://localhost:8080
+```
+
+### 3️⃣ Git Commit & Push
+```bash
+cd /Users/macbook/Projects/Adly-tenda
 git add .
 git commit -m "feat: deskripsi perubahan"
 git push origin main
 ```
 
-### 4. Deploy ke Hosting
-Sync file ke hosting (cPanel / FTP / GitHub Pages / Netlify).
+### 4️⃣ Deploy ke Hosting
+- **GitHub Pages**: Settings → Pages → branch main → Save
+- **Netlify**: Import from Git → auto deploy tiap push
+- **cPanel**: Upload via FTP ke /public_html/
 
-## 🛠️ Teknologi
-- HTML5
-- CSS3
-- JavaScript (Vanilla)
+## 🔗 Links
+- GitHub: https://github.com/NexDigi-Dev/Adly-tenda
+- Local: /Users/macbook/Projects/Adly-tenda

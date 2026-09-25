@@ -1,91 +1,117 @@
-// Inisialisasi AOS (Animasi)
-if (typeof AOS !== 'undefined' && AOS && typeof AOS.init === 'function') {
-    AOS.init({
-        once: true,
-        offset: 50,
-        duration: 800,
-    });
+/* =========================================================
+   SERENA WEDDING — Main Script
+   ========================================================= */
+
+// ── 1. NAVBAR: scroll state + hamburger ──────────────────
+const navbar   = document.getElementById('mainNav');
+const hamburger= document.getElementById('hamburger');
+const navLinks = document.getElementById('navLinks');
+
+function updateNavbar() {
+  if (window.scrollY > 60) navbar.classList.add('scrolled');
+  else                      navbar.classList.remove('scrolled');
 }
+window.addEventListener('scroll', updateNavbar, { passive: true });
+window.addEventListener('load', updateNavbar);
+updateNavbar();
 
-// Script untuk Navbar Glassmorphism Scroll Effect
-const navbar = document.getElementById('mainNav');
-if (navbar) {
-    const updateNavbarState = function () {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    };
+hamburger.addEventListener('click', () => {
+  const open = hamburger.classList.toggle('open');
+  navLinks.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+});
 
-    // Run on scroll, load, and page show
-    window.addEventListener('scroll', updateNavbarState);
-    window.addEventListener('load', updateNavbarState);
-    window.addEventListener('pageshow', updateNavbarState); // For back/forward cache
-    
-    // Initial check
-    updateNavbarState();
-}
+navLinks.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    navLinks.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
 
-// Animasi Menu Mobile (Hamburger Icon Toggle)
-const navbarCollapseEl = document.getElementById('navbarNav');
-const navbarIcon = document.querySelector('.navbar-toggler i');
 
-if (navbarCollapseEl && typeof bootstrap !== 'undefined') {
-    // toggle icon animation (guarded)
-    if (navbarIcon) {
-        navbarCollapseEl.addEventListener('show.bs.collapse', function () {
-            navbarIcon.style.transition = 'transform 0.25s ease';
-            navbarIcon.style.transform = 'rotate(90deg)';
-            setTimeout(() => {
-                navbarIcon.classList.remove('fa-bars');
-                navbarIcon.classList.add('fa-times');
-                navbarIcon.style.transform = 'rotate(0deg)';
-            }, 120);
-        });
-
-        navbarCollapseEl.addEventListener('hide.bs.collapse', function () {
-            navbarIcon.style.transition = 'transform 0.25s ease';
-            navbarIcon.style.transform = 'rotate(-90deg)';
-            setTimeout(() => {
-                navbarIcon.classList.remove('fa-times');
-                navbarIcon.classList.add('fa-bars');
-                navbarIcon.style.transform = 'rotate(0deg)';
-            }, 120);
-        });
+// ── 2. INTERSECTION OBSERVER: scroll animations ──────────
+const animEls = document.querySelectorAll('.anim-up, .anim-left, .anim-right');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      // stagger delay based on position in parent
+      const siblings = [...entry.target.parentElement.children];
+      const idx = siblings.indexOf(entry.target);
+      entry.target.style.transitionDelay = `${idx * 80}ms`;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
     }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
-    // Auto-close menu saat salah satu link diklik (khusus mobile)
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            if (window.innerWidth < 992 && navbarCollapseEl.classList.contains('show')) {
-                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapseEl);
-                if (bsCollapse) bsCollapse.hide();
-            }
-        });
-    });
-} else {
-    // Fallback: attach safe click-close behavior even if bootstrap instance not found
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            try {
-                if (window.innerWidth < 992 && navbarCollapseEl && navbarCollapseEl.classList.contains('show')) {
-                    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapseEl);
-                    if (bsCollapse) bsCollapse.hide();
-                }
-            } catch (e) {
-                // silent fail to avoid uncaught exceptions
-            }
-        });
-    });
-}
+animEls.forEach(el => observer.observe(el));
 
-// Auto-close menu saat salah satu link diklik (khusus mobile)
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        if (window.innerWidth < 992 && navbarCollapseEl.classList.contains('show')) {
-            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapseEl);
-            if (bsCollapse) bsCollapse.hide();
-        }
+
+// ── 3. FAQ ACCORDION ─────────────────────────────────────
+document.querySelectorAll('.faq-question').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const isOpen   = btn.getAttribute('aria-expanded') === 'true';
+    const answer   = btn.nextElementSibling;
+    const allBtns  = document.querySelectorAll('.faq-question');
+
+    // close all
+    allBtns.forEach(b => {
+      b.setAttribute('aria-expanded', 'false');
+      b.nextElementSibling.classList.remove('open');
     });
+
+    // open clicked (if it was closed)
+    if (!isOpen) {
+      btn.setAttribute('aria-expanded', 'true');
+      answer.classList.add('open');
+    }
+  });
+});
+
+
+// ── 4. CONTACT FORM → WhatsApp ───────────────────────────
+const WA_NUMBER = '6285694061768';
+
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const nama    = document.getElementById('nama').value.trim();
+  const tanggal = document.getElementById('tanggal').value;
+  const tamu    = document.getElementById('tamu').value;
+  const pesan   = document.getElementById('pesan').value.trim();
+
+  if (!nama) { alert('Mohon isi nama pasangan.'); return; }
+
+  const tgl = tanggal
+    ? new Date(tanggal).toLocaleDateString('id-ID', { day:'numeric', month:'long', year:'numeric' })
+    : 'Belum ditentukan';
+
+  const text = [
+    `Halo Serena Wedding, saya ingin berkonsultasi mengenai paket pernikahan. 🌿`,
+    ``,
+    `📋 *Detail Awal:*`,
+    `• Nama Pasangan : ${nama}`,
+    `• Rencana Tanggal : ${tgl}`,
+    `• Estimasi Tamu : ${tamu || 'Belum ditentukan'}`,
+    `• Catatan : ${pesan || '-'}`,
+    ``,
+    `Mohon informasi lebih lanjut mengenai paket yang tersedia. Terima kasih!`
+  ].join('\n');
+
+  const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`;
+  window.open(url, '_blank');
+});
+
+
+// ── 5. SMOOTH SCROLL (anchor links) ──────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', function(e) {
+    const target = document.querySelector(this.getAttribute('href'));
+    if (!target) return;
+    e.preventDefault();
+    const offset = navbar.offsetHeight + 16;
+    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+    window.scrollTo({ top, behavior: 'smooth' });
+  });
 });
