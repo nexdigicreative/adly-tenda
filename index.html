@@ -1,498 +1,325 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Serena Wedding — Wedding Organizer Profesional Jakarta</title>
-  <meta name="description" content="Serena Wedding adalah wedding organizer profesional di Jakarta. Kami membantu Anda merayakan hari paling berkesan dalam hidup dengan penuh kasih dan detail." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title id="cms-title">Serena Wedding | Wedding Organizer Profesional Jakarta</title>
+  <meta name="description" id="cms-desc" content="Wedding organizer berpengalaman dengan sentuhan personal dan desain kontemporer untuk setiap momen pernikahan Anda."/>
+  <meta property="og:title" id="cms-og-title" content="Serena Wedding | Wedding Organizer Profesional Jakarta"/>
+  <meta property="og:description" id="cms-og-desc" content="Wedding organizer berpengalaman dengan sentuhan personal dan desain kontemporer."/>
+  <meta property="og:image" id="cms-og-image" content="Assets/hero_main.jpg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
-<!-- ===== NAVBAR ===== -->
-<header id="mainNav" class="navbar-wrapper">
-  <div class="nav-container">
-    <a href="#beranda" class="brand">
-      <span class="brand-icon">✦</span>
-      <span class="brand-name">Serena <em>Wedding</em></span>
-    </a>
-    <nav class="nav-links" id="navLinks">
-      <a href="#tentang">Tentang</a>
-      <a href="#layanan">Layanan</a>
-      <a href="#proses">Proses</a>
-      <a href="#portofolio">Portofolio</a>
-      <a href="#testimoni">Testimoni</a>
-      <a href="#faq">FAQ</a>
-      <a href="#kontak" class="nav-cta">Konsultasi</a>
-    </nav>
-    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
-    </button>
+<!-- NAVBAR -->
+<nav id="mainNav" class="nav">
+  <div class="nav__inner">
+    <a href="#" class="nav__brand" id="cms-brand-name">Serena <em>Wedding</em></a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#tentang">Tentang</a></li>
+      <li><a href="#layanan">Layanan</a></li>
+      <li><a href="#proses">Proses</a></li>
+      <li><a href="#portofolio">Portofolio</a></li>
+      <li><a href="#testimoni">Testimoni</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#kontak" class="nav__cta">Konsultasi</a></li>
+    </ul>
+    <button class="nav__hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
-</header>
+</nav>
 
-<!-- ===== HERO ===== -->
+<!-- HERO -->
 <section class="hero" id="beranda">
-  <div class="hero-img-wrap">
-    <img src="Assets/hero_wedding.jpg" alt="Pernikahan elegan di taman outdoor" class="hero-bg" loading="eager" />
-    <div class="hero-overlay"></div>
+  <div class="hero__media">
+    <img src="Assets/hero_main.jpg" alt="Hero" class="hero__img" id="cms-hero-img" loading="eager"/>
+    <div class="hero__veil"></div>
   </div>
-  <div class="hero-content">
-    <p class="hero-eyebrow">Wedding Organizer Jakarta</p>
-    <h1 class="hero-headline">Hari yang paling<br /><em>Anda impikan,</em><br />kami wujudkan.</h1>
-    <p class="hero-sub">Setiap detail pernikahan Anda kami rancang dengan penuh perhatian — dari dekorasi pertama hingga tamu terakhir pulang dengan senyum.</p>
-    <div class="hero-ctas">
-      <a href="#kontak" class="btn-primary">Jadwalkan Konsultasi</a>
-      <a href="#layanan" class="btn-secondary">Lihat Paket Layanan</a>
+  <div class="hero__body">
+    <span class="hero__eyebrow" id="cms-hero-eyebrow">Wedding Organizer · Jakarta</span>
+    <h1 class="hero__title" id="cms-hero-title">Hari yang paling<br/><em>Anda impikan,</em><br/>kami wujudkan.</h1>
+    <p class="hero__sub" id="cms-hero-sub">Setiap detail pernikahan Anda kami rancang dengan penuh perhatian — dari dekorasi pertama hingga tamu terakhir pulang dengan senyum.</p>
+    <div class="hero__actions">
+      <a href="#kontak" class="btn btn--light">Jadwalkan Konsultasi</a>
+      <a href="#layanan" class="btn btn--ghost">Lihat Paket</a>
     </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <span class="stat-num">320+</span>
-        <span class="stat-label">Acara Ditangani</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-num">8 Tahun</span>
-        <span class="stat-label">Pengalaman</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <span class="stat-num">4.9 ★</span>
-        <span class="stat-label">Rating Klien</span>
-      </div>
-    </div>
+  </div>
+  <div class="hero__stats">
+    <div class="hero__stat"><span class="hero__stat-num" id="cms-stat1-num">320+</span><span class="hero__stat-lbl" id="cms-stat1-lbl">Acara</span></div>
+    <div class="hero__stat-div"></div>
+    <div class="hero__stat"><span class="hero__stat-num" id="cms-stat2-num">8 Thn</span><span class="hero__stat-lbl" id="cms-stat2-lbl">Pengalaman</span></div>
+    <div class="hero__stat-div"></div>
+    <div class="hero__stat"><span class="hero__stat-num" id="cms-stat3-num">4.9★</span><span class="hero__stat-lbl" id="cms-stat3-lbl">Rating</span></div>
   </div>
 </section>
 
-<!-- ===== TENTANG ===== -->
-<section class="section section-alt" id="tentang">
-  <div class="container two-col">
-    <div class="about-text anim-left">
-      <p class="section-eyebrow">Tentang Kami</p>
-      <h2 class="section-title">Bukan sekadar vendor — kami adalah teman perjalanan Anda.</h2>
-      <p class="body-text">Serena Wedding lahir dari keyakinan bahwa setiap pernikahan adalah kisah unik yang tak bisa diulang. Sejak 2016, kami telah mendampingi ratusan pasangan mewujudkan impian mereka — dari yang intim dan sederhana hingga yang grand dan megah.</p>
-      <p class="body-text">Kami percaya bahwa keajaiban sebuah hari-H terletak pada detail kecil yang dirasakan, bukan sekadar dilihat. Karena itu, setiap project kami tangani seperti pernikahan kami sendiri.</p>
-      <blockquote class="pull-quote">
-        "Pernikahan yang sempurna bukan yang bebas hambatan — tapi yang dinikmati sepenuh hati oleh dua insan dan orang-orang yang mereka cintai."
-      </blockquote>
-    </div>
-    <div class="about-visual anim-right">
-      <div class="about-img-stack">
-        <img src="Assets/portfolio_3.jpg" alt="Pasangan pengantin di resepsi" class="about-img-main" loading="lazy" />
-        <div class="about-badge">
-          <span class="badge-num">320+</span>
-          <span class="badge-label">Pasangan Bahagia</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== LAYANAN & PAKET ===== -->
-<section class="section" id="layanan">
+<!-- VIDEO / SHOWREEL -->
+<section class="video-section" id="cms-video-section">
   <div class="container">
-    <div class="section-header anim-up">
-      <p class="section-eyebrow">Layanan & Paket</p>
-      <h2 class="section-title">Pilih paket yang<br />sesuai dengan impian Anda</h2>
-      <p class="section-sub">Semua harga bersifat estimasi awal dan akan disesuaikan saat konsultasi dengan kondisi venue, jumlah tamu, dan kebutuhan spesifik Anda.</p>
+    <div class="video-wrap" id="cms-video-wrap">
+      <iframe id="cms-video-iframe" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Showreel" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen loading="lazy"></iframe>
     </div>
-    <div class="packages-grid">
+    <div class="video-caption">
+      <p class="eyebrow">Showreel</p>
+      <h2 id="cms-video-title">Lihat bagaimana kami<br/>menciptakan keajaiban</h2>
+    </div>
+  </div>
+</section>
 
-      <!-- Intimate -->
-      <div class="package-card anim-up">
-        <div class="pkg-header">
-          <p class="pkg-eyebrow">Paket</p>
-          <h3 class="pkg-name">Intimate</h3>
-          <p class="pkg-price">Mulai Rp 25 juta</p>
-          <p class="pkg-desc">Untuk pernikahan privat yang hangat, maksimal 150 tamu.</p>
-        </div>
-        <ul class="pkg-list">
-          <li><i class="fas fa-check"></i> Konsultasi & perencanaan konsep</li>
-          <li><i class="fas fa-check"></i> Koordinasi hari-H (8 jam)</li>
-          <li><i class="fas fa-check"></i> Dekorasi sederhana & floral</li>
-          <li><i class="fas fa-check"></i> Koordinasi vendor (katering, foto)</li>
-          <li><i class="fas fa-check"></i> Rundown & briefing tim</li>
-          <li class="pkg-list-disabled"><i class="fas fa-minus"></i> Dekorasi custom & backdrop</li>
-          <li class="pkg-list-disabled"><i class="fas fa-minus"></i> Entertainment & MC profesional</li>
+<!-- TENTANG -->
+<section class="section" id="tentang">
+  <div class="container grid-2">
+    <div class="about__text reveal">
+      <p class="eyebrow" id="cms-about-eyebrow">Tentang Kami</p>
+      <h2 id="cms-about-title">Bukan sekadar vendor —<br/>kami teman perjalanan Anda.</h2>
+      <p class="body-copy" id="cms-about-body1">Serena Wedding lahir dari keyakinan bahwa setiap pernikahan adalah kisah unik yang tak bisa diulang. Sejak 2016, kami mendampingi ratusan pasangan mewujudkan impian mereka.</p>
+      <p class="body-copy" id="cms-about-body2">Kami percaya keajaiban sebuah hari-H terletak pada detail kecil yang dirasakan, bukan sekadar dilihat.</p>
+      <blockquote class="pullquote" id="cms-about-quote">"Pernikahan yang sempurna bukan yang bebas hambatan — tapi yang dinikmati sepenuh hati."</blockquote>
+    </div>
+    <div class="about__visual reveal">
+      <div class="about__img-frame">
+        <img src="Assets/portfolio_3.jpg" alt="Tentang Kami" id="cms-about-img" loading="lazy"/>
+      </div>
+      <div class="about__badge">
+        <span class="about__badge-num" id="cms-about-badge-num">320+</span>
+        <span class="about__badge-lbl" id="cms-about-badge-lbl">Pasangan Bahagia</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAYANAN -->
+<section class="section section--alt" id="layanan">
+  <div class="container">
+    <div class="section-hd reveal">
+      <p class="eyebrow" id="cms-pkg-eyebrow">Layanan & Paket</p>
+      <h2 id="cms-pkg-title">Pilih paket yang sesuai<br/>dengan impian Anda</h2>
+      <p class="section-sub" id="cms-pkg-sub">Semua harga bersifat estimasi dan akan disesuaikan saat konsultasi.</p>
+    </div>
+    <div class="pkg-grid">
+      <div class="pkg reveal">
+        <p class="pkg__label">Paket</p>
+        <h3 class="pkg__name" id="cms-pkg1-name">Intimate</h3>
+        <p class="pkg__price" id="cms-pkg1-price">Mulai Rp 25 juta</p>
+        <p class="pkg__desc" id="cms-pkg1-desc">Untuk pernikahan privat yang hangat, maks. 150 tamu.</p>
+        <ul class="pkg__list" id="cms-pkg1-list">
+          <li>Konsultasi & perencanaan konsep</li>
+          <li>Koordinasi hari-H (8 jam)</li>
+          <li>Dekorasi sederhana & floral</li>
+          <li>Koordinasi vendor</li>
+          <li>Rundown & briefing tim</li>
         </ul>
-        <a href="#kontak" class="pkg-cta-outline">Konsultasikan</a>
+        <a href="#kontak" class="pkg__btn">Konsultasikan</a>
       </div>
-
-      <!-- Signature (highlighted) -->
-      <div class="package-card package-featured anim-up">
-        <div class="pkg-badge-top">Paling Populer</div>
-        <div class="pkg-header">
-          <p class="pkg-eyebrow">Paket</p>
-          <h3 class="pkg-name">Signature</h3>
-          <p class="pkg-price">Mulai Rp 55 juta</p>
-          <p class="pkg-desc">Pernikahan yang berkesan untuk 150–400 tamu.</p>
-        </div>
-        <ul class="pkg-list">
-          <li><i class="fas fa-check"></i> Konsultasi & perencanaan konsep</li>
-          <li><i class="fas fa-check"></i> Koordinasi penuh hari-H (12 jam)</li>
-          <li><i class="fas fa-check"></i> Dekorasi custom & floral arrangement</li>
-          <li><i class="fas fa-check"></i> Koordinasi semua vendor</li>
-          <li><i class="fas fa-check"></i> MC profesional & entertainment</li>
-          <li><i class="fas fa-check"></i> Wedding coordinator on-site (3 orang)</li>
-          <li><i class="fas fa-check"></i> Souvenir & stationery</li>
+      <div class="pkg pkg--featured reveal">
+        <div class="pkg__ribbon">Populer</div>
+        <p class="pkg__label">Paket</p>
+        <h3 class="pkg__name" id="cms-pkg2-name">Signature</h3>
+        <p class="pkg__price" id="cms-pkg2-price">Mulai Rp 55 juta</p>
+        <p class="pkg__desc" id="cms-pkg2-desc">Pernikahan berkesan untuk 150–400 tamu.</p>
+        <ul class="pkg__list" id="cms-pkg2-list">
+          <li>Konsultasi & konsep penuh</li>
+          <li>Koordinasi hari-H (12 jam)</li>
+          <li>Dekorasi custom & floral</li>
+          <li>Koordinasi semua vendor</li>
+          <li>MC profesional & entertainment</li>
+          <li>Coordinator on-site (3 orang)</li>
+          <li>Souvenir & stationery</li>
         </ul>
-        <a href="#kontak" class="pkg-cta-primary">Konsultasikan</a>
+        <a href="#kontak" class="pkg__btn pkg__btn--white">Konsultasikan</a>
       </div>
-
-      <!-- Grand -->
-      <div class="package-card anim-up">
-        <div class="pkg-header">
-          <p class="pkg-eyebrow">Paket</p>
-          <h3 class="pkg-name">Grand</h3>
-          <p class="pkg-price">Kustom / Hubungi Kami</p>
-          <p class="pkg-desc">Untuk pernikahan mewah 400+ tamu atau acara multi-hari.</p>
-        </div>
-        <ul class="pkg-list">
-          <li><i class="fas fa-check"></i> Full planning (venue hunting s/d hari-H)</li>
-          <li><i class="fas fa-check"></i> Konsep eksklusif & desain custom</li>
-          <li><i class="fas fa-check"></i> Dekorasi premium & lighting spektakuler</li>
-          <li><i class="fas fa-check"></i> Manajemen vendor lengkap</li>
-          <li><i class="fas fa-check"></i> Entertainment & live music</li>
-          <li><i class="fas fa-check"></i> Tim koordinator penuh (5+ orang)</li>
-          <li><i class="fas fa-check"></i> Layanan luar kota & destinasi</li>
+      <div class="pkg reveal">
+        <p class="pkg__label">Paket</p>
+        <h3 class="pkg__name" id="cms-pkg3-name">Grand</h3>
+        <p class="pkg__price" id="cms-pkg3-price">Kustom / Hubungi Kami</p>
+        <p class="pkg__desc" id="cms-pkg3-desc">Pernikahan mewah 400+ tamu atau multi-hari.</p>
+        <ul class="pkg__list" id="cms-pkg3-list">
+          <li>Full planning (venue s/d hari-H)</li>
+          <li>Konsep eksklusif & desain custom</li>
+          <li>Dekorasi premium & lighting</li>
+          <li>Manajemen vendor lengkap</li>
+          <li>Live music & entertainment</li>
+          <li>Tim 5+ koordinator</li>
+          <li>Layanan luar kota & destinasi</li>
         </ul>
-        <a href="#kontak" class="pkg-cta-outline">Konsultasikan</a>
+        <a href="#kontak" class="pkg__btn">Konsultasikan</a>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ===== PROSES ===== -->
-<section class="section section-alt" id="proses">
+<!-- PROSES -->
+<section class="section" id="proses">
   <div class="container">
-    <div class="section-header anim-up">
-      <p class="section-eyebrow">Alur Kerja</p>
-      <h2 class="section-title">Dari impian menjadi<br />kenangan nyata</h2>
+    <div class="section-hd reveal">
+      <p class="eyebrow">Alur Kerja</p>
+      <h2 id="cms-proses-title">Dari impian menjadi<br/>kenangan nyata</h2>
     </div>
-    <div class="process-track">
-      <div class="process-line"></div>
-      <div class="process-steps">
-
-        <div class="process-step anim-up">
-          <div class="step-circle">1</div>
-          <div class="step-content">
-            <h3 class="step-title">Konsultasi</h3>
-            <p class="step-desc">Kami mendengarkan impian, budget, dan preferensi Anda — tanpa tekanan, tanpa terburu-buru.</p>
-          </div>
-        </div>
-
-        <div class="process-step anim-up">
-          <div class="step-circle">2</div>
-          <div class="step-content">
-            <h3 class="step-title">Konsep & Perencanaan</h3>
-            <p class="step-desc">Tim kami merancang konsep, mood board, pilihan vendor, dan estimasi anggaran yang transparan.</p>
-          </div>
-        </div>
-
-        <div class="process-step anim-up">
-          <div class="step-circle">3</div>
-          <div class="step-content">
-            <h3 class="step-title">Persiapan</h3>
-            <p class="step-desc">Koordinasi vendor, survei lokasi, fitting dekorasi, dan gladi bersih agar semua berjalan mulus.</p>
-          </div>
-        </div>
-
-        <div class="process-step anim-up">
-          <div class="step-circle">4</div>
-          <div class="step-content">
-            <h3 class="step-title">Hari-H</h3>
-            <p class="step-desc">Tim kami hadir dari setup pertama hingga tamu terakhir — Anda tinggal menikmati setiap momennya.</p>
-          </div>
-        </div>
-
-        <div class="process-step anim-up">
-          <div class="step-circle">5</div>
-          <div class="step-content">
-            <h3 class="step-title">Pasca Acara</h3>
-            <p class="step-desc">Laporan dokumentasi, koordinasi pengembalian properti, dan satu sesi follow-up dari kami untuk Anda.</p>
-          </div>
-        </div>
-
+    <div class="process">
+      <div class="process__item reveal">
+        <div class="process__num">01</div>
+        <h3 class="process__title" id="cms-p1-title">Konsultasi</h3>
+        <p class="process__desc" id="cms-p1-desc">Kami mendengarkan impian, budget, dan preferensi Anda — tanpa tekanan.</p>
+      </div>
+      <div class="process__item reveal">
+        <div class="process__num">02</div>
+        <h3 class="process__title" id="cms-p2-title">Konsep & Perencanaan</h3>
+        <p class="process__desc" id="cms-p2-desc">Tim kami merancang konsep, mood board, dan estimasi anggaran yang transparan.</p>
+      </div>
+      <div class="process__item reveal">
+        <div class="process__num">03</div>
+        <h3 class="process__title" id="cms-p3-title">Persiapan</h3>
+        <p class="process__desc" id="cms-p3-desc">Koordinasi vendor, survei lokasi, fitting dekorasi, dan gladi bersih.</p>
+      </div>
+      <div class="process__item reveal">
+        <div class="process__num">04</div>
+        <h3 class="process__title" id="cms-p4-title">Hari-H</h3>
+        <p class="process__desc" id="cms-p4-desc">Tim kami hadir dari setup pertama hingga tamu terakhir — Anda tinggal menikmati.</p>
+      </div>
+      <div class="process__item reveal">
+        <div class="process__num">05</div>
+        <h3 class="process__title" id="cms-p5-title">Pasca Acara</h3>
+        <p class="process__desc" id="cms-p5-desc">Laporan dokumentasi, koordinasi pengembalian properti, dan follow-up dari kami.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== PORTOFOLIO ===== -->
-<section class="section" id="portofolio">
+<!-- PORTOFOLIO -->
+<section class="section section--alt" id="portofolio">
   <div class="container">
-    <div class="section-header anim-up">
-      <p class="section-eyebrow">Portofolio</p>
-      <h2 class="section-title">Kisah-kisah yang<br />kami bantu tulis</h2>
+    <div class="section-hd reveal">
+      <p class="eyebrow">Portofolio</p>
+      <h2 id="cms-porto-title">Kisah-kisah yang<br/>kami bantu tulis</h2>
     </div>
-    <div class="portfolio-grid">
-      <div class="portfolio-item port-large anim-up">
-        <img src="Assets/portfolio_1.jpg" alt="Resepsi pernikahan mewah ballroom Jakarta" loading="lazy" />
-        <div class="port-overlay">
-          <span class="port-label">Resepsi Mewah · Jakarta</span>
-        </div>
+    <div class="gallery" id="cms-gallery">
+      <div class="gallery__item gallery__item--lg reveal">
+        <img src="Assets/portfolio_1.jpg" alt="Resepsi ballroom" id="cms-porto1-img" loading="lazy"/>
+        <div class="gallery__cap"><span id="cms-porto1-label">Resepsi Mewah · Jakarta</span></div>
       </div>
-      <div class="portfolio-item port-tall anim-up">
-        <img src="Assets/portfolio_2.jpg" alt="Pernikahan outdoor taman Bali" loading="lazy" />
-        <div class="port-overlay">
-          <span class="port-label">Outdoor Garden · Bali</span>
-        </div>
+      <div class="gallery__item gallery__item--tall reveal">
+        <img src="Assets/portfolio_2.jpg" alt="Outdoor garden" id="cms-porto2-img" loading="lazy"/>
+        <div class="gallery__cap"><span id="cms-porto2-label">Outdoor Garden · Bali</span></div>
       </div>
-      <div class="portfolio-item port-wide anim-up">
-        <img src="Assets/portfolio_3.jpg" alt="Pernikahan adat Jawa ballroom" loading="lazy" />
-        <div class="port-overlay">
-          <span class="port-label">Adat Jawa · Yogyakarta</span>
-        </div>
+      <div class="gallery__item gallery__item--wide reveal">
+        <img src="Assets/portfolio_3.jpg" alt="Adat Jawa" id="cms-porto3-img" loading="lazy"/>
+        <div class="gallery__cap"><span id="cms-porto3-label">Adat Jawa · Yogyakarta</span></div>
       </div>
-      <div class="portfolio-item port-sq anim-up">
-        <img src="Assets/portfolio_4.jpg" alt="Dekorasi altar pernikahan boho" loading="lazy" />
-        <div class="port-overlay">
-          <span class="port-label">Boho Ceremony · Bandung</span>
-        </div>
+      <div class="gallery__item gallery__item--sq reveal">
+        <img src="Assets/portfolio_4.jpg" alt="Boho ceremony" id="cms-porto4-img" loading="lazy"/>
+        <div class="gallery__cap"><span id="cms-porto4-label">Boho Ceremony · Bandung</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== TESTIMONI ===== -->
-<section class="section section-alt" id="testimoni">
+<!-- TESTIMONI -->
+<section class="section" id="testimoni">
   <div class="container">
-    <div class="section-header anim-up">
-      <p class="section-eyebrow">Testimoni</p>
-      <h2 class="section-title">Kata mereka tentang<br />hari istimewa mereka</h2>
+    <div class="section-hd reveal">
+      <p class="eyebrow">Testimoni</p>
+      <h2 id="cms-testi-title">Kata mereka tentang<br/>hari istimewa mereka</h2>
     </div>
-    <div class="testimonials-grid">
-
-      <div class="testi-card anim-up">
-        <p class="testi-quote">"Kami nggak perlu khawatir apapun di hari-H. Tim Serena benar-benar hadir untuk kami — bahkan hal-hal kecil pun mereka perhatikan. Terima kasih sudah membuat hari itu sempurna."</p>
-        <div class="testi-meta">
-          <div class="testi-avatar">R</div>
-          <div>
-            <p class="testi-name">Rizky & Amelia</p>
-            <p class="testi-pkg">Paket Signature · Maret 2025</p>
-          </div>
-        </div>
+    <div class="testi-grid">
+      <div class="testi reveal">
+        <p class="testi__quote" id="cms-t1-quote">"Kami nggak perlu khawatir apapun di hari-H. Tim Serena benar-benar hadir untuk kami — bahkan hal-hal kecil pun mereka perhatikan."</p>
+        <div class="testi__meta"><span class="testi__av">R</span><div><p class="testi__name" id="cms-t1-name">Rizky & Amelia</p><p class="testi__pkg" id="cms-t1-pkg">Paket Signature · Maret 2025</p></div></div>
       </div>
-
-      <div class="testi-card anim-up">
-        <p class="testi-quote">"Dekorasinya jauh melewati ekspektasi kami. Setiap sudut terasa personal dan hangat, bukan template. Banyak tamu yang nanya nama WO-nya!"</p>
-        <div class="testi-meta">
-          <div class="testi-avatar">D</div>
-          <div>
-            <p class="testi-name">Dimas & Nadia</p>
-            <p class="testi-pkg">Paket Grand · November 2024</p>
-          </div>
-        </div>
+      <div class="testi reveal">
+        <p class="testi__quote" id="cms-t2-quote">"Dekorasinya jauh melewati ekspektasi kami. Setiap sudut terasa personal dan hangat, bukan template."</p>
+        <div class="testi__meta"><span class="testi__av">D</span><div><p class="testi__name" id="cms-t2-name">Dimas & Nadia</p><p class="testi__pkg" id="cms-t2-pkg">Paket Grand · November 2024</p></div></div>
       </div>
-
-      <div class="testi-card anim-up">
-        <p class="testi-quote">"Kami memilih Paket Intimate karena budget terbatas, tapi hasilnya benar-benar mewah. Tim Serena sangat kreatif dan membantu kami tanpa henti."</p>
-        <div class="testi-meta">
-          <div class="testi-avatar">F</div>
-          <div>
-            <p class="testi-name">Farhan & Sari</p>
-            <p class="testi-pkg">Paket Intimate · Agustus 2025</p>
-          </div>
-        </div>
+      <div class="testi reveal">
+        <p class="testi__quote" id="cms-t3-quote">"Paket Intimate tapi hasilnya benar-benar mewah. Tim Serena sangat kreatif dan membantu kami tanpa henti."</p>
+        <div class="testi__meta"><span class="testi__av">F</span><div><p class="testi__name" id="cms-t3-name">Farhan & Sari</p><p class="testi__pkg" id="cms-t3-pkg">Paket Intimate · Agustus 2025</p></div></div>
       </div>
-
-      <div class="testi-card anim-up">
-        <p class="testi-quote">"Komunikasinya luar biasa responsif dari awal sampai akhir. Proses persiapan 6 bulan terasa ringan karena mereka yang pegang kemudi. Sangat rekomendasikan!"</p>
-        <div class="testi-meta">
-          <div class="testi-avatar">A</div>
-          <div>
-            <p class="testi-name">Aldi & Putri</p>
-            <p class="testi-pkg">Paket Signature · Januari 2025</p>
-          </div>
-        </div>
+      <div class="testi reveal">
+        <p class="testi__quote" id="cms-t4-quote">"Komunikasinya luar biasa responsif dari awal sampai akhir. Proses persiapan 6 bulan terasa ringan karena mereka pegang kemudi."</p>
+        <div class="testi__meta"><span class="testi__av">A</span><div><p class="testi__name" id="cms-t4-name">Aldi & Putri</p><p class="testi__pkg" id="cms-t4-pkg">Paket Signature · Januari 2025</p></div></div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ===== FAQ ===== -->
-<section class="section" id="faq">
-  <div class="container faq-container">
-    <div class="section-header anim-up">
-      <p class="section-eyebrow">FAQ</p>
-      <h2 class="section-title">Pertanyaan yang<br />sering ditanyakan</h2>
+<!-- FAQ -->
+<section class="section section--alt" id="faq">
+  <div class="container faq-wrap">
+    <div class="section-hd reveal">
+      <p class="eyebrow">FAQ</p>
+      <h2>Pertanyaan yang<br/>sering ditanyakan</h2>
     </div>
     <div class="faq-list">
-
-      <div class="faq-item anim-up">
-        <button class="faq-question" aria-expanded="false">
-          Berapa lama sebaiknya booking sebelum hari-H?
-          <span class="faq-icon"><i class="fas fa-plus"></i></span>
-        </button>
-        <div class="faq-answer">
-          <p>Kami menyarankan booking minimal 6–12 bulan sebelum tanggal pernikahan, terutama untuk paket Signature dan Grand. Untuk Paket Intimate, minimal 3–4 bulan sudah cukup. Semakin awal, semakin banyak pilihan vendor dan venue yang tersedia untuk Anda.</p>
-        </div>
-      </div>
-
-      <div class="faq-item anim-up">
-        <button class="faq-question" aria-expanded="false">
-          Apakah paket bisa dikustomisasi?
-          <span class="faq-icon"><i class="fas fa-plus"></i></span>
-        </button>
-        <div class="faq-answer">
-          <p>Tentu! Semua paket kami bersifat fleksibel. Kami bisa menambahkan atau mengurangi layanan sesuai kebutuhan dan budget Anda. Konsultasi gratis tersedia untuk membantu Anda menemukan kombinasi yang paling tepat.</p>
-        </div>
-      </div>
-
-      <div class="faq-item anim-up">
-        <button class="faq-question" aria-expanded="false">
-          Berapa DP (Down Payment) untuk booking?
-          <span class="faq-icon"><i class="fas fa-plus"></i></span>
-        </button>
-        <div class="faq-answer">
-          <p>DP awal untuk mengkonfirmasi booking adalah 30% dari total paket. Pelunasan dapat dilakukan secara bertahap: 50% saat H-3 bulan, dan sisanya paling lambat H-7 sebelum hari acara.</p>
-        </div>
-      </div>
-
-      <div class="faq-item anim-up">
-        <button class="faq-question" aria-expanded="false">
-          Apakah melayani acara di luar kota?
-          <span class="faq-icon"><i class="fas fa-plus"></i></span>
-        </button>
-        <div class="faq-answer">
-          <p>Ya! Kami melayani acara di seluruh Indonesia, termasuk destinasi wedding di Bali, Yogyakarta, Lombok, dan kota-kota lainnya. Biaya perjalanan tim akan dikomunikasikan secara transparan saat konsultasi.</p>
-        </div>
-      </div>
-
-      <div class="faq-item anim-up">
-        <button class="faq-question" aria-expanded="false">
-          Bagaimana jika vendor pilihan kami sudah booked di tanggal tersebut?
-          <span class="faq-icon"><i class="fas fa-plus"></i></span>
-        </button>
-        <div class="faq-answer">
-          <p>Kami memiliki jaringan vendor terpercaya yang luas. Jika pilihan utama tidak tersedia, kami akan menyiapkan alternatif dengan kualitas setara dan membantu Anda melakukan perbandingan sebelum memutuskan.</p>
-        </div>
-      </div>
-
+      <div class="faq reveal"><button class="faq__q" aria-expanded="false"><span id="cms-faq1-q">Berapa lama sebaiknya booking sebelum hari-H?</span><i class="fas fa-plus faq__icon"></i></button><div class="faq__a"><p id="cms-faq1-a">Kami menyarankan minimal 6–12 bulan sebelum tanggal pernikahan untuk Signature dan Grand. Paket Intimate minimal 3–4 bulan.</p></div></div>
+      <div class="faq reveal"><button class="faq__q" aria-expanded="false"><span id="cms-faq2-q">Apakah paket bisa dikustomisasi?</span><i class="fas fa-plus faq__icon"></i></button><div class="faq__a"><p id="cms-faq2-a">Tentu! Semua paket bersifat fleksibel. Kami bisa menambahkan atau mengurangi layanan sesuai budget Anda.</p></div></div>
+      <div class="faq reveal"><button class="faq__q" aria-expanded="false"><span id="cms-faq3-q">Berapa DP untuk booking?</span><i class="fas fa-plus faq__icon"></i></button><div class="faq__a"><p id="cms-faq3-a">DP awal 30% dari total paket. Pelunasan bertahap: 50% saat H-3 bulan, sisanya H-7 sebelum acara.</p></div></div>
+      <div class="faq reveal"><button class="faq__q" aria-expanded="false"><span id="cms-faq4-q">Apakah melayani acara di luar kota?</span><i class="fas fa-plus faq__icon"></i></button><div class="faq__a"><p id="cms-faq4-a">Ya! Kami melayani seluruh Indonesia termasuk destinasi wedding Bali, Yogyakarta, Lombok, dan kota lainnya.</p></div></div>
+      <div class="faq reveal"><button class="faq__q" aria-expanded="false"><span id="cms-faq5-q">Bagaimana jika vendor pilihan sudah booked?</span><i class="fas fa-plus faq__icon"></i></button><div class="faq__a"><p id="cms-faq5-a">Kami memiliki jaringan vendor terpercaya yang luas dan akan menyiapkan alternatif berkualitas setara.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- ===== KONTAK ===== -->
-<section class="section section-alt" id="kontak">
+<!-- KONTAK -->
+<section class="section" id="kontak">
   <div class="container">
-    <div class="section-header anim-up">
-      <p class="section-eyebrow">Kontak & Booking</p>
-      <h2 class="section-title">Mari mulai perjalanan<br />indah ini bersama</h2>
-      <p class="section-sub">Isi form di bawah dan kami akan membalas via WhatsApp dalam waktu 24 jam.</p>
+    <div class="section-hd reveal">
+      <p class="eyebrow">Kontak & Booking</p>
+      <h2 id="cms-kontak-title">Mari mulai perjalanan<br/>indah ini bersama</h2>
+      <p class="section-sub" id="cms-kontak-sub">Isi form di bawah, kami balas via WhatsApp dalam 24 jam.</p>
     </div>
-    <div class="contact-wrap">
-      <form class="contact-form anim-left" id="contactForm" novalidate>
-        <div class="form-group">
-          <label for="nama">Nama Lengkap Pasangan</label>
-          <input type="text" id="nama" name="nama" placeholder="mis. Rizky & Amelia" required />
+    <div class="contact-grid">
+      <form class="contact-form reveal" id="contactForm" novalidate>
+        <div class="field"><label for="nama">Nama Pasangan</label><input type="text" id="nama" placeholder="mis. Rizky & Amelia" required/></div>
+        <div class="field"><label for="tanggal">Rencana Tanggal</label><input type="date" id="tanggal" required/></div>
+        <div class="field"><label for="tamu">Estimasi Tamu</label>
+          <select id="tamu"><option value="">-- Pilih estimasi --</option><option>&lt; 100 tamu</option><option>100–250 tamu</option><option>250–500 tamu</option><option>&gt; 500 tamu</option></select>
         </div>
-        <div class="form-group">
-          <label for="tanggal">Rencana Tanggal Pernikahan</label>
-          <input type="date" id="tanggal" name="tanggal" required />
-        </div>
-        <div class="form-group">
-          <label for="tamu">Perkiraan Jumlah Tamu</label>
-          <select id="tamu" name="tamu">
-            <option value="">-- Pilih estimasi --</option>
-            <option value="< 100 tamu">&lt; 100 tamu (Intimate)</option>
-            <option value="100–250 tamu">100–250 tamu</option>
-            <option value="250–500 tamu">250–500 tamu</option>
-            <option value="> 500 tamu">&gt; 500 tamu (Grand)</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="pesan">Ceritakan impian pernikahan Anda</label>
-          <textarea id="pesan" name="pesan" rows="4" placeholder="Tema, lokasi impian, vendor yang sudah diincar, atau pertanyaan lain..."></textarea>
-        </div>
-        <button type="submit" class="btn-wa-submit" id="submitBtn">
-          <i class="fab fa-whatsapp"></i> Kirim ke WhatsApp
-        </button>
+        <div class="field"><label for="pesan">Ceritakan impian Anda</label><textarea id="pesan" rows="4" placeholder="Tema, lokasi, atau pertanyaan..."></textarea></div>
+        <button type="submit" class="btn btn--primary btn--full"><i class="fab fa-whatsapp"></i> Kirim ke WhatsApp</button>
       </form>
-
-      <div class="contact-info anim-right">
-        <h3 class="contact-info-title">Hubungi Langsung</h3>
-        <ul class="contact-details">
-          <li>
-            <span class="ci-icon"><i class="fab fa-whatsapp"></i></span>
-            <div>
-              <span class="ci-label">WhatsApp</span>
-              <a href="https://wa.me/6285694061768" target="_blank" class="ci-value">0856-9406-1768</a>
-            </div>
-          </li>
-          <li>
-            <span class="ci-icon"><i class="fas fa-map-marker-alt"></i></span>
-            <div>
-              <span class="ci-label">Studio</span>
-              <span class="ci-value">Jl. [Nama Jalan], Jakarta Selatan</span>
-            </div>
-          </li>
-          <li>
-            <span class="ci-icon"><i class="fas fa-clock"></i></span>
-            <div>
-              <span class="ci-label">Jam Konsultasi</span>
-              <span class="ci-value">Senin–Sabtu, 09.00–18.00 WIB</span>
-            </div>
-          </li>
-          <li>
-            <span class="ci-icon"><i class="fas fa-envelope"></i></span>
-            <div>
-              <span class="ci-label">Email</span>
-              <a href="mailto:hello@serenawedding.id" class="ci-value">hello@serenawedding.id</a>
-            </div>
-          </li>
+      <div class="contact-info reveal">
+        <h3>Hubungi Langsung</h3>
+        <ul class="ci-list">
+          <li><span class="ci-ic"><i class="fab fa-whatsapp"></i></span><div><small>WhatsApp</small><a href="https://wa.me/6285694061768" id="cms-wa-link" target="_blank"><strong id="cms-wa-num">0856-9406-1768</strong></a></div></li>
+          <li><span class="ci-ic"><i class="fas fa-map-marker-alt"></i></span><div><small>Studio</small><span id="cms-alamat">Jl. [Nama Jalan], Jakarta Selatan</span></div></li>
+          <li><span class="ci-ic"><i class="fas fa-clock"></i></span><div><small>Jam Konsultasi</small><span id="cms-jam">Senin–Sabtu, 09.00–18.00 WIB</span></div></li>
+          <li><span class="ci-ic"><i class="fas fa-envelope"></i></span><div><small>Email</small><a href="#" id="cms-email">hello@serenawedding.id</a></div></li>
         </ul>
-        <div class="contact-socials">
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
-          <a href="https://wa.me/6285694061768" aria-label="WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <div class="socials">
+          <a href="#" id="cms-ig" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" id="cms-tiktok" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          <a href="https://wa.me/6285694061768" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ===== FOOTER ===== -->
-<footer>
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <span class="brand-icon">✦</span>
-      <span class="brand-name">Serena <em>Wedding</em></span>
-      <p class="footer-tagline">Membantu Anda merayakan cinta dengan cara yang paling indah.</p>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a href="#" class="nav__brand" id="cms-footer-brand">Serena <em>Wedding</em></a>
+      <p id="cms-footer-tagline">Membantu Anda merayakan cinta dengan cara yang paling indah.</p>
     </div>
-    <div class="footer-links-wrap">
-      <div class="footer-col">
-        <h5>Navigasi</h5>
-        <a href="#tentang">Tentang Kami</a>
-        <a href="#layanan">Layanan & Paket</a>
-        <a href="#proses">Alur Kerja</a>
-        <a href="#portofolio">Portofolio</a>
-      </div>
-      <div class="footer-col">
-        <h5>Layanan</h5>
-        <a href="#layanan">Paket Intimate</a>
-        <a href="#layanan">Paket Signature</a>
-        <a href="#layanan">Paket Grand</a>
-        <a href="#kontak">Konsultasi Gratis</a>
-      </div>
+    <div class="footer__cols">
+      <div><h5>Navigasi</h5><a href="#tentang">Tentang</a><a href="#layanan">Layanan</a><a href="#proses">Proses</a><a href="#portofolio">Portofolio</a></div>
+      <div><h5>Layanan</h5><a href="#layanan">Paket Intimate</a><a href="#layanan">Paket Signature</a><a href="#layanan">Paket Grand</a><a href="#kontak">Konsultasi Gratis</a></div>
     </div>
   </div>
-  <div class="footer-bottom">
-    <p>&copy; 2026 Serena Wedding. Hak Cipta Dilindungi.</p>
-  </div>
+  <div class="footer__bottom"><p id="cms-copyright">&copy; 2026 Serena Wedding. Hak Cipta Dilindungi.</p></div>
 </footer>
 
-<!-- Floating WhatsApp -->
-<a href="https://wa.me/6285694061768?text=Halo%20Serena%20Wedding%2C%20saya%20ingin%20berkonsultasi%20mengenai%20paket%20pernikahan." class="wa-float" target="_blank" aria-label="Chat WhatsApp">
-  <i class="fab fa-whatsapp"></i>
-</a>
+<!-- Floating WA -->
+<a href="https://wa.me/6285694061768?text=Halo%20Serena%20Wedding%2C%20saya%20ingin%20berkonsultasi." id="cms-wa-float" class="wa-float" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
+<!-- Admin link (hidden) -->
+<a href="admin/login.html" style="position:fixed;bottom:28px;left:28px;width:36px;height:36px;background:rgba(0,0,0,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.5);font-size:0.75rem;text-decoration:none;z-index:999;" title="Admin"><i class="fas fa-lock"></i></a>
+
+<script src="cms.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
